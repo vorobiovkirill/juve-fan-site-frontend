@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { News } from '../components/News'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       </Head>
       <main>
         <h1>JUVE UA</h1>
+        <News />
       </main>
     </>
   )
