@@ -1,0 +1,14 @@
+query NewsPosts {
+    newsposts {
+        data {
+            attributes {
+                title
+                writtenBy
+                imageUrl
+                publishedAt
+                createdAt
+                updatedAt
+            }
+        }
+    }
+}
