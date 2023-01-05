@@ -1,10 +1,11 @@
-/* eslint-disable */
-import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/core';
+import { gql } from '@apollo/client';
+import * as Apollo from '@apollo/client';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
 export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
 export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
+const defaultOptions = {} as const;
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: string;
@@ -12,11 +13,8 @@ export type Scalars = {
   Boolean: boolean;
   Int: number;
   Float: number;
-  /** A date-time string at UTC, such as 2007-12-03T10:15:30Z, compliant with the `date-time` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar. */
   DateTime: any;
-  /** The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf). */
   JSON: any;
-  /** The `Upload` scalar type represents a file upload. */
   Upload: any;
 };
 
@@ -952,10 +950,57 @@ export type UsersPermissionsUserRelationResponseCollection = {
   data: Array<UsersPermissionsUserEntity>;
 };
 
-export type NewsPostsQueryVariables = Exact<{ [key: string]: never; }>;
+export type GetNewsPostsQueryVariables = Exact<{
+  filters?: InputMaybe<NewspostFiltersInput>;
+  pagination?: InputMaybe<PaginationArg>;
+}>;
 
 
-export type NewsPostsQuery = { __typename?: 'Query', newsposts?: { __typename?: 'NewspostEntityResponseCollection', data: Array<{ __typename?: 'NewspostEntity', attributes?: { __typename?: 'Newspost', title?: string | null, writtenBy?: string | null, imageUrl?: string | null, publishedAt?: any | null, createdAt?: any | null, updatedAt?: any | null } | null }> } | null };
+export type GetNewsPostsQuery = { __typename?: 'Query', newsposts?: { __typename?: 'NewspostEntityResponseCollection', data: Array<{ __typename?: 'NewspostEntity', attributes?: { __typename?: 'Newspost', title?: string | null, writtenBy?: string | null, imageUrl?: string | null, publishedAt?: any | null, createdAt?: any | null, updatedAt?: any | null } | null }> } | null };
 
 
-export const NewsPostsDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"NewsPosts"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"newsposts"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"data"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"attributes"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"writtenBy"}},{"kind":"Field","name":{"kind":"Name","value":"imageUrl"}},{"kind":"Field","name":{"kind":"Name","value":"publishedAt"}},{"kind":"Field","name":{"kind":"Name","value":"createdAt"}},{"kind":"Field","name":{"kind":"Name","value":"updatedAt"}}]}}]}}]}}]}}]} as unknown as DocumentNode<NewsPostsQuery, NewsPostsQueryVariables>;
+export const GetNewsPostsDocument = gql`
+    query GetNewsPosts($filters: NewspostFiltersInput, $pagination: PaginationArg) {
+  newsposts(filters: $filters, pagination: $pagination) {
+    data {
+      attributes {
+        title
+        writtenBy
+        imageUrl
+        publishedAt
+        createdAt
+        updatedAt
+      }
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetNewsPostsQuery__
+ *
+ * To run a query within a React component, call `useGetNewsPostsQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetNewsPostsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetNewsPostsQuery({
+ *   variables: {
+ *      filters: // value for 'filters'
+ *      pagination: // value for 'pagination'
+ *   },
+ * });
+ */
+export function useGetNewsPostsQuery(baseOptions?: Apollo.QueryHookOptions<GetNewsPostsQuery, GetNewsPostsQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<GetNewsPostsQuery, GetNewsPostsQueryVariables>(GetNewsPostsDocument, options);
+      }
+export function useGetNewsPostsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetNewsPostsQuery, GetNewsPostsQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<GetNewsPostsQuery, GetNewsPostsQueryVariables>(GetNewsPostsDocument, options);
+        }
+export type GetNewsPostsQueryHookResult = ReturnType<typeof useGetNewsPostsQuery>;
+export type GetNewsPostsLazyQueryHookResult = ReturnType<typeof useGetNewsPostsLazyQuery>;
+export type GetNewsPostsQueryResult = Apollo.QueryResult<GetNewsPostsQuery, GetNewsPostsQueryVariables>;

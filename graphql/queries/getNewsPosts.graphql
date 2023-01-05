@@ -1,5 +1,5 @@
-query NewsPosts {
-    newsposts {
+query GetNewsPosts($filters: NewspostFiltersInput, $pagination: PaginationArg) {
+    newsposts(filters: $filters, pagination: $pagination) {
         data {
             attributes {
                 title

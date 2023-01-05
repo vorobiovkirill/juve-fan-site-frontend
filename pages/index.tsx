@@ -1,7 +1,8 @@
 import Head from 'next/head'
 
-import { News } from '@/components/News'
+import { Feed } from '@/components/Feed'
 import { Sidebar } from '@/components/Sidebar'
+import { Pagination } from '@/components/Pagination'
 
 export default function Home() {
   return (
@@ -16,7 +17,8 @@ export default function Home() {
       <Sidebar />
       <section className="bg-gray-400">
         CONTENT
-        <News />
+        <Feed />
+        <Pagination />
       </section>
       <Sidebar />
 

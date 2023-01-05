@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { ApolloClient, HttpLink, InMemoryCache, NormalizedCacheObject } from '@apollo/client';
-// import { relayStylePagination } from '@apollo/client/utilities';
+import { offsetLimitPagination } from '@apollo/client/utilities';
 import merge from 'deepmerge';
 import isEqual from 'lodash/isEqual';
 
@@ -16,14 +16,14 @@ const createApolloClient = () => {
             credentials: 'same-origin', // Additional fetch() options like `credentials` or `headers`
         }),
         cache: new InMemoryCache({
-            // typePolicies is not required to use Apollo with Next.js - only for doing pagination.
-            // typePolicies: {
-            //     Query: {
-            //         fields: {
-            //             posts: relayStylePagination(),
-            //         },
-            //     },
-            // },
+            //typePolicies is not required to use Apollo with Next.js - only for doing pagination.
+            typePolicies: {
+                Query: {
+                    fields: {
+                        feed: offsetLimitPagination(),
+                    },
+                },
+            },
         }),
         defaultOptions: {
           watchQuery: {
