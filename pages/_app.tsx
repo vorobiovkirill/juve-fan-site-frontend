@@ -5,7 +5,6 @@ import { ApolloProvider } from "@apollo/client"
 import { useApollo } from "@/lib/apollo-client"
 import { Layout } from '@/components/Layout'
 
-
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',

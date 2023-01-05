@@ -1,8 +1,9 @@
-query GetNewsPosts($filters: NewspostFiltersInput, $pagination: PaginationArg) {
-    newsposts(filters: $filters, pagination: $pagination) {
+query GetNewsById($id: ID!) {
+    newspost(id: $id) {
         data {
             id
             attributes {
+                body
                 title
                 writtenBy
                 imageUrl

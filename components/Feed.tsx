@@ -1,16 +1,20 @@
-import { useGetNewsPostsQuery } from '../generated/types-and-hooks'
 
-export const Feed = () => {
-  const { data, loading } = useGetNewsPostsQuery({
-    variables: {
-      pagination: {
-        page: 1,
-        pageSize: 2
-      }
-    }
-  });
+import { Pagination } from '@/components/Pagination'
+import { FeedItem } from '@/components/FeedItem'
+import { NewspostEntity } from 'generated/types-and-hooks'
 
+type FeedProps = {
+  data: NewspostEntity[]
+}
+
+export const Feed = ({ data }: FeedProps) => {
   return (
-    <div>{JSON.stringify(data, null, 2)}</div>
+    <section className="bg-gray-100 p-4">
+      <h2 className="text-3xl font-bold dark:text-white mb-4">Новини</h2>
+      <div className="flex gap-x-4 mb-8">
+        {data.map((item) => <FeedItem key={item.id} data={item.attributes} />)}
+      </div>
+      <Pagination />
+    </section>
   )
 }

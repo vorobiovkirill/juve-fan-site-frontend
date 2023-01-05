@@ -394,7 +394,8 @@ export type Newspost = {
   createdAt?: Maybe<Scalars['DateTime']>;
   imageUrl?: Maybe<Scalars['String']>;
   publishedAt?: Maybe<Scalars['DateTime']>;
-  title?: Maybe<Scalars['String']>;
+  slug: Scalars['String'];
+  title: Scalars['String'];
   updatedAt?: Maybe<Scalars['DateTime']>;
   writtenBy?: Maybe<Scalars['String']>;
 };
@@ -425,6 +426,7 @@ export type NewspostFiltersInput = {
   not?: InputMaybe<NewspostFiltersInput>;
   or?: InputMaybe<Array<InputMaybe<NewspostFiltersInput>>>;
   publishedAt?: InputMaybe<DateTimeFilterInput>;
+  slug?: InputMaybe<StringFilterInput>;
   title?: InputMaybe<StringFilterInput>;
   updatedAt?: InputMaybe<DateTimeFilterInput>;
   writtenBy?: InputMaybe<StringFilterInput>;
@@ -434,6 +436,7 @@ export type NewspostInput = {
   body?: InputMaybe<Scalars['String']>;
   imageUrl?: InputMaybe<Scalars['String']>;
   publishedAt?: InputMaybe<Scalars['DateTime']>;
+  slug?: InputMaybe<Scalars['String']>;
   title?: InputMaybe<Scalars['String']>;
   writtenBy?: InputMaybe<Scalars['String']>;
 };
@@ -950,19 +953,74 @@ export type UsersPermissionsUserRelationResponseCollection = {
   data: Array<UsersPermissionsUserEntity>;
 };
 
+export type GetNewsByIdQueryVariables = Exact<{
+  id: Scalars['ID'];
+}>;
+
+
+export type GetNewsByIdQuery = { __typename?: 'Query', newspost?: { __typename?: 'NewspostEntityResponse', data?: { __typename?: 'NewspostEntity', id?: string | null, attributes?: { __typename?: 'Newspost', body?: string | null, title: string, writtenBy?: string | null, imageUrl?: string | null, publishedAt?: any | null, createdAt?: any | null, updatedAt?: any | null, slug: string } | null } | null } | null };
+
 export type GetNewsPostsQueryVariables = Exact<{
   filters?: InputMaybe<NewspostFiltersInput>;
   pagination?: InputMaybe<PaginationArg>;
 }>;
 
 
-export type GetNewsPostsQuery = { __typename?: 'Query', newsposts?: { __typename?: 'NewspostEntityResponseCollection', data: Array<{ __typename?: 'NewspostEntity', attributes?: { __typename?: 'Newspost', title?: string | null, writtenBy?: string | null, imageUrl?: string | null, publishedAt?: any | null, createdAt?: any | null, updatedAt?: any | null } | null }> } | null };
+export type GetNewsPostsQuery = { __typename?: 'Query', newsposts?: { __typename?: 'NewspostEntityResponseCollection', data: Array<{ __typename?: 'NewspostEntity', id?: string | null, attributes?: { __typename?: 'Newspost', title: string, writtenBy?: string | null, imageUrl?: string | null, publishedAt?: any | null, createdAt?: any | null, updatedAt?: any | null, slug: string } | null }> } | null };
 
 
+export const GetNewsByIdDocument = gql`
+    query GetNewsById($id: ID!) {
+  newspost(id: $id) {
+    data {
+      id
+      attributes {
+        body
+        title
+        writtenBy
+        imageUrl
+        publishedAt
+        createdAt
+        updatedAt
+        slug
+      }
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetNewsByIdQuery__
+ *
+ * To run a query within a React component, call `useGetNewsByIdQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetNewsByIdQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetNewsByIdQuery({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useGetNewsByIdQuery(baseOptions: Apollo.QueryHookOptions<GetNewsByIdQuery, GetNewsByIdQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<GetNewsByIdQuery, GetNewsByIdQueryVariables>(GetNewsByIdDocument, options);
+      }
+export function useGetNewsByIdLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetNewsByIdQuery, GetNewsByIdQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<GetNewsByIdQuery, GetNewsByIdQueryVariables>(GetNewsByIdDocument, options);
+        }
+export type GetNewsByIdQueryHookResult = ReturnType<typeof useGetNewsByIdQuery>;
+export type GetNewsByIdLazyQueryHookResult = ReturnType<typeof useGetNewsByIdLazyQuery>;
+export type GetNewsByIdQueryResult = Apollo.QueryResult<GetNewsByIdQuery, GetNewsByIdQueryVariables>;
 export const GetNewsPostsDocument = gql`
     query GetNewsPosts($filters: NewspostFiltersInput, $pagination: PaginationArg) {
   newsposts(filters: $filters, pagination: $pagination) {
     data {
+      id
       attributes {
         title
         writtenBy
@@ -970,6 +1028,7 @@ export const GetNewsPostsDocument = gql`
         publishedAt
         createdAt
         updatedAt
+        slug
       }
     }
   }
