@@ -16,7 +16,7 @@ const NewsPosts = () => {
 
   return (
     <div>
-      <ul>
+      {/* <ul>
         {data?.newsposts.data.map(item => (
           <li key={item.id}>
             <Link href={`news/${item.attributes?.slug}` || ''}>
@@ -24,7 +24,7 @@ const NewsPosts = () => {
             </Link>
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   )
 }

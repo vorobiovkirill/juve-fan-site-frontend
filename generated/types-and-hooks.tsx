@@ -42,6 +42,145 @@ export type BooleanFilterInput = {
   startsWith?: InputMaybe<Scalars['Boolean']>;
 };
 
+export type CommentsComment = {
+  __typename?: 'CommentsComment';
+  approvalStatus?: Maybe<Scalars['String']>;
+  authorAvatar?: Maybe<Scalars['String']>;
+  authorEmail?: Maybe<Scalars['String']>;
+  authorId?: Maybe<Scalars['String']>;
+  authorName?: Maybe<Scalars['String']>;
+  authorUser?: Maybe<UsersPermissionsUserEntityResponse>;
+  blockReason?: Maybe<Scalars['String']>;
+  blocked?: Maybe<Scalars['Boolean']>;
+  blockedThread?: Maybe<Scalars['Boolean']>;
+  content: Scalars['String'];
+  createdAt?: Maybe<Scalars['DateTime']>;
+  isAdminComment?: Maybe<Scalars['Boolean']>;
+  related?: Maybe<Scalars['String']>;
+  removed?: Maybe<Scalars['Boolean']>;
+  reports?: Maybe<CommentsCommentReportRelationResponseCollection>;
+  threadOf?: Maybe<CommentsCommentEntityResponse>;
+  updatedAt?: Maybe<Scalars['DateTime']>;
+};
+
+
+export type CommentsCommentReportsArgs = {
+  filters?: InputMaybe<CommentsCommentReportFiltersInput>;
+  pagination?: InputMaybe<PaginationArg>;
+  sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+};
+
+export type CommentsCommentEntity = {
+  __typename?: 'CommentsCommentEntity';
+  attributes?: Maybe<CommentsComment>;
+  id?: Maybe<Scalars['ID']>;
+};
+
+export type CommentsCommentEntityResponse = {
+  __typename?: 'CommentsCommentEntityResponse';
+  data?: Maybe<CommentsCommentEntity>;
+};
+
+export type CommentsCommentEntityResponseCollection = {
+  __typename?: 'CommentsCommentEntityResponseCollection';
+  data: Array<CommentsCommentEntity>;
+  meta: ResponseCollectionMeta;
+};
+
+export type CommentsCommentFiltersInput = {
+  and?: InputMaybe<Array<InputMaybe<CommentsCommentFiltersInput>>>;
+  approvalStatus?: InputMaybe<StringFilterInput>;
+  authorAvatar?: InputMaybe<StringFilterInput>;
+  authorEmail?: InputMaybe<StringFilterInput>;
+  authorId?: InputMaybe<StringFilterInput>;
+  authorName?: InputMaybe<StringFilterInput>;
+  authorUser?: InputMaybe<UsersPermissionsUserFiltersInput>;
+  blockReason?: InputMaybe<StringFilterInput>;
+  blocked?: InputMaybe<BooleanFilterInput>;
+  blockedThread?: InputMaybe<BooleanFilterInput>;
+  content?: InputMaybe<StringFilterInput>;
+  createdAt?: InputMaybe<DateTimeFilterInput>;
+  id?: InputMaybe<IdFilterInput>;
+  isAdminComment?: InputMaybe<BooleanFilterInput>;
+  not?: InputMaybe<CommentsCommentFiltersInput>;
+  or?: InputMaybe<Array<InputMaybe<CommentsCommentFiltersInput>>>;
+  related?: InputMaybe<StringFilterInput>;
+  removed?: InputMaybe<BooleanFilterInput>;
+  reports?: InputMaybe<CommentsCommentReportFiltersInput>;
+  threadOf?: InputMaybe<CommentsCommentFiltersInput>;
+  updatedAt?: InputMaybe<DateTimeFilterInput>;
+};
+
+export type CommentsCommentInput = {
+  approvalStatus?: InputMaybe<Scalars['String']>;
+  authorAvatar?: InputMaybe<Scalars['String']>;
+  authorEmail?: InputMaybe<Scalars['String']>;
+  authorId?: InputMaybe<Scalars['String']>;
+  authorName?: InputMaybe<Scalars['String']>;
+  authorUser?: InputMaybe<Scalars['ID']>;
+  blockReason?: InputMaybe<Scalars['String']>;
+  blocked?: InputMaybe<Scalars['Boolean']>;
+  blockedThread?: InputMaybe<Scalars['Boolean']>;
+  content?: InputMaybe<Scalars['String']>;
+  isAdminComment?: InputMaybe<Scalars['Boolean']>;
+  related?: InputMaybe<Scalars['String']>;
+  removed?: InputMaybe<Scalars['Boolean']>;
+  reports?: InputMaybe<Array<InputMaybe<Scalars['ID']>>>;
+  threadOf?: InputMaybe<Scalars['ID']>;
+};
+
+export type CommentsCommentReport = {
+  __typename?: 'CommentsCommentReport';
+  content?: Maybe<Scalars['String']>;
+  createdAt?: Maybe<Scalars['DateTime']>;
+  reason: Enum_Commentscommentreport_Reason;
+  related?: Maybe<CommentsCommentEntityResponse>;
+  resolved?: Maybe<Scalars['Boolean']>;
+  updatedAt?: Maybe<Scalars['DateTime']>;
+};
+
+export type CommentsCommentReportEntity = {
+  __typename?: 'CommentsCommentReportEntity';
+  attributes?: Maybe<CommentsCommentReport>;
+  id?: Maybe<Scalars['ID']>;
+};
+
+export type CommentsCommentReportEntityResponse = {
+  __typename?: 'CommentsCommentReportEntityResponse';
+  data?: Maybe<CommentsCommentReportEntity>;
+};
+
+export type CommentsCommentReportEntityResponseCollection = {
+  __typename?: 'CommentsCommentReportEntityResponseCollection';
+  data: Array<CommentsCommentReportEntity>;
+  meta: ResponseCollectionMeta;
+};
+
+export type CommentsCommentReportFiltersInput = {
+  and?: InputMaybe<Array<InputMaybe<CommentsCommentReportFiltersInput>>>;
+  content?: InputMaybe<StringFilterInput>;
+  createdAt?: InputMaybe<DateTimeFilterInput>;
+  id?: InputMaybe<IdFilterInput>;
+  not?: InputMaybe<CommentsCommentReportFiltersInput>;
+  or?: InputMaybe<Array<InputMaybe<CommentsCommentReportFiltersInput>>>;
+  reason?: InputMaybe<StringFilterInput>;
+  related?: InputMaybe<CommentsCommentFiltersInput>;
+  resolved?: InputMaybe<BooleanFilterInput>;
+  updatedAt?: InputMaybe<DateTimeFilterInput>;
+};
+
+export type CommentsCommentReportInput = {
+  content?: InputMaybe<Scalars['String']>;
+  reason?: InputMaybe<Enum_Commentscommentreport_Reason>;
+  related?: InputMaybe<Scalars['ID']>;
+  resolved?: InputMaybe<Scalars['Boolean']>;
+};
+
+export type CommentsCommentReportRelationResponseCollection = {
+  __typename?: 'CommentsCommentReportRelationResponseCollection';
+  data: Array<CommentsCommentReportEntity>;
+};
+
 export type DateTimeFilterInput = {
   and?: InputMaybe<Array<InputMaybe<Scalars['DateTime']>>>;
   between?: InputMaybe<Array<InputMaybe<Scalars['DateTime']>>>;
@@ -65,6 +204,12 @@ export type DateTimeFilterInput = {
   or?: InputMaybe<Array<InputMaybe<Scalars['DateTime']>>>;
   startsWith?: InputMaybe<Scalars['DateTime']>;
 };
+
+export enum Enum_Commentscommentreport_Reason {
+  BadLanguage = 'BAD_LANGUAGE',
+  Discrimination = 'DISCRIMINATION',
+  Other = 'OTHER'
+}
 
 export type FileInfoInput = {
   alternativeText?: InputMaybe<Scalars['String']>;
@@ -96,7 +241,7 @@ export type FloatFilterInput = {
   startsWith?: InputMaybe<Scalars['Float']>;
 };
 
-export type GenericMorph = I18NLocale | Newspost | UploadFile | UploadFolder | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser;
+export type GenericMorph = CommentsComment | CommentsCommentReport | I18NLocale | Newspost | SlugifySlug | UploadFile | UploadFolder | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser;
 
 export type I18NLocale = {
   __typename?: 'I18NLocale';
@@ -210,14 +355,20 @@ export type Mutation = {
   __typename?: 'Mutation';
   /** Change user password. Confirm with the current password. */
   changePassword?: Maybe<UsersPermissionsLoginPayload>;
+  createCommentsComment?: Maybe<CommentsCommentEntityResponse>;
+  createCommentsCommentReport?: Maybe<CommentsCommentReportEntityResponse>;
   createNewspost?: Maybe<NewspostEntityResponse>;
+  createSlugifySlug?: Maybe<SlugifySlugEntityResponse>;
   createUploadFile?: Maybe<UploadFileEntityResponse>;
   createUploadFolder?: Maybe<UploadFolderEntityResponse>;
   /** Create a new role */
   createUsersPermissionsRole?: Maybe<UsersPermissionsCreateRolePayload>;
   /** Create a new user */
   createUsersPermissionsUser: UsersPermissionsUserEntityResponse;
+  deleteCommentsComment?: Maybe<CommentsCommentEntityResponse>;
+  deleteCommentsCommentReport?: Maybe<CommentsCommentReportEntityResponse>;
   deleteNewspost?: Maybe<NewspostEntityResponse>;
+  deleteSlugifySlug?: Maybe<SlugifySlugEntityResponse>;
   deleteUploadFile?: Maybe<UploadFileEntityResponse>;
   deleteUploadFolder?: Maybe<UploadFolderEntityResponse>;
   /** Delete an existing role */
@@ -235,8 +386,11 @@ export type Mutation = {
   removeFile?: Maybe<UploadFileEntityResponse>;
   /** Reset user password. Confirm with a code (resetToken from forgotPassword) */
   resetPassword?: Maybe<UsersPermissionsLoginPayload>;
+  updateCommentsComment?: Maybe<CommentsCommentEntityResponse>;
+  updateCommentsCommentReport?: Maybe<CommentsCommentReportEntityResponse>;
   updateFileInfo: UploadFileEntityResponse;
   updateNewspost?: Maybe<NewspostEntityResponse>;
+  updateSlugifySlug?: Maybe<SlugifySlugEntityResponse>;
   updateUploadFile?: Maybe<UploadFileEntityResponse>;
   updateUploadFolder?: Maybe<UploadFolderEntityResponse>;
   /** Update an existing role */
@@ -254,8 +408,23 @@ export type MutationChangePasswordArgs = {
 };
 
 
+export type MutationCreateCommentsCommentArgs = {
+  data: CommentsCommentInput;
+};
+
+
+export type MutationCreateCommentsCommentReportArgs = {
+  data: CommentsCommentReportInput;
+};
+
+
 export type MutationCreateNewspostArgs = {
   data: NewspostInput;
+};
+
+
+export type MutationCreateSlugifySlugArgs = {
+  data: SlugifySlugInput;
 };
 
 
@@ -279,7 +448,22 @@ export type MutationCreateUsersPermissionsUserArgs = {
 };
 
 
+export type MutationDeleteCommentsCommentArgs = {
+  id: Scalars['ID'];
+};
+
+
+export type MutationDeleteCommentsCommentReportArgs = {
+  id: Scalars['ID'];
+};
+
+
 export type MutationDeleteNewspostArgs = {
+  id: Scalars['ID'];
+};
+
+
+export type MutationDeleteSlugifySlugArgs = {
   id: Scalars['ID'];
 };
 
@@ -344,6 +528,18 @@ export type MutationResetPasswordArgs = {
 };
 
 
+export type MutationUpdateCommentsCommentArgs = {
+  data: CommentsCommentInput;
+  id: Scalars['ID'];
+};
+
+
+export type MutationUpdateCommentsCommentReportArgs = {
+  data: CommentsCommentReportInput;
+  id: Scalars['ID'];
+};
+
+
 export type MutationUpdateFileInfoArgs = {
   id: Scalars['ID'];
   info?: InputMaybe<FileInfoInput>;
@@ -352,6 +548,12 @@ export type MutationUpdateFileInfoArgs = {
 
 export type MutationUpdateNewspostArgs = {
   data: NewspostInput;
+  id: Scalars['ID'];
+};
+
+
+export type MutationUpdateSlugifySlugArgs = {
+  data: SlugifySlugInput;
   id: Scalars['ID'];
 };
 
@@ -390,14 +592,14 @@ export type MutationUploadArgs = {
 
 export type Newspost = {
   __typename?: 'Newspost';
-  body?: Maybe<Scalars['String']>;
+  body: Scalars['String'];
   createdAt?: Maybe<Scalars['DateTime']>;
-  imageUrl?: Maybe<Scalars['String']>;
+  imageUrl: Scalars['String'];
   publishedAt?: Maybe<Scalars['DateTime']>;
   slug: Scalars['String'];
   title: Scalars['String'];
   updatedAt?: Maybe<Scalars['DateTime']>;
-  writtenBy?: Maybe<Scalars['String']>;
+  writtenBy: Scalars['String'];
 };
 
 export type NewspostEntity = {
@@ -463,11 +665,17 @@ export enum PublicationState {
 
 export type Query = {
   __typename?: 'Query';
+  commentsComment?: Maybe<CommentsCommentEntityResponse>;
+  commentsCommentReport?: Maybe<CommentsCommentReportEntityResponse>;
+  commentsCommentReports?: Maybe<CommentsCommentReportEntityResponseCollection>;
+  commentsComments?: Maybe<CommentsCommentEntityResponseCollection>;
   i18NLocale?: Maybe<I18NLocaleEntityResponse>;
   i18NLocales?: Maybe<I18NLocaleEntityResponseCollection>;
   me?: Maybe<UsersPermissionsMe>;
   newspost?: Maybe<NewspostEntityResponse>;
   newsposts?: Maybe<NewspostEntityResponseCollection>;
+  slugifySlug?: Maybe<SlugifySlugEntityResponse>;
+  slugifySlugs?: Maybe<SlugifySlugEntityResponseCollection>;
   uploadFile?: Maybe<UploadFileEntityResponse>;
   uploadFiles?: Maybe<UploadFileEntityResponseCollection>;
   uploadFolder?: Maybe<UploadFolderEntityResponse>;
@@ -476,6 +684,30 @@ export type Query = {
   usersPermissionsRoles?: Maybe<UsersPermissionsRoleEntityResponseCollection>;
   usersPermissionsUser?: Maybe<UsersPermissionsUserEntityResponse>;
   usersPermissionsUsers?: Maybe<UsersPermissionsUserEntityResponseCollection>;
+};
+
+
+export type QueryCommentsCommentArgs = {
+  id?: InputMaybe<Scalars['ID']>;
+};
+
+
+export type QueryCommentsCommentReportArgs = {
+  id?: InputMaybe<Scalars['ID']>;
+};
+
+
+export type QueryCommentsCommentReportsArgs = {
+  filters?: InputMaybe<CommentsCommentReportFiltersInput>;
+  pagination?: InputMaybe<PaginationArg>;
+  sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+};
+
+
+export type QueryCommentsCommentsArgs = {
+  filters?: InputMaybe<CommentsCommentFiltersInput>;
+  pagination?: InputMaybe<PaginationArg>;
+  sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
 };
 
 
@@ -500,6 +732,18 @@ export type QueryNewspostsArgs = {
   filters?: InputMaybe<NewspostFiltersInput>;
   pagination?: InputMaybe<PaginationArg>;
   publicationState?: InputMaybe<PublicationState>;
+  sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+};
+
+
+export type QuerySlugifySlugArgs = {
+  id?: InputMaybe<Scalars['ID']>;
+};
+
+
+export type QuerySlugifySlugsArgs = {
+  filters?: InputMaybe<SlugifySlugFiltersInput>;
+  pagination?: InputMaybe<PaginationArg>;
   sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
 };
 
@@ -554,6 +798,47 @@ export type QueryUsersPermissionsUsersArgs = {
 export type ResponseCollectionMeta = {
   __typename?: 'ResponseCollectionMeta';
   pagination: Pagination;
+};
+
+export type SlugifySlug = {
+  __typename?: 'SlugifySlug';
+  count?: Maybe<Scalars['Int']>;
+  createdAt?: Maybe<Scalars['DateTime']>;
+  slug?: Maybe<Scalars['String']>;
+  updatedAt?: Maybe<Scalars['DateTime']>;
+};
+
+export type SlugifySlugEntity = {
+  __typename?: 'SlugifySlugEntity';
+  attributes?: Maybe<SlugifySlug>;
+  id?: Maybe<Scalars['ID']>;
+};
+
+export type SlugifySlugEntityResponse = {
+  __typename?: 'SlugifySlugEntityResponse';
+  data?: Maybe<SlugifySlugEntity>;
+};
+
+export type SlugifySlugEntityResponseCollection = {
+  __typename?: 'SlugifySlugEntityResponseCollection';
+  data: Array<SlugifySlugEntity>;
+  meta: ResponseCollectionMeta;
+};
+
+export type SlugifySlugFiltersInput = {
+  and?: InputMaybe<Array<InputMaybe<SlugifySlugFiltersInput>>>;
+  count?: InputMaybe<IntFilterInput>;
+  createdAt?: InputMaybe<DateTimeFilterInput>;
+  id?: InputMaybe<IdFilterInput>;
+  not?: InputMaybe<SlugifySlugFiltersInput>;
+  or?: InputMaybe<Array<InputMaybe<SlugifySlugFiltersInput>>>;
+  slug?: InputMaybe<StringFilterInput>;
+  updatedAt?: InputMaybe<DateTimeFilterInput>;
+};
+
+export type SlugifySlugInput = {
+  count?: InputMaybe<Scalars['Int']>;
+  slug?: InputMaybe<Scalars['String']>;
 };
 
 export type StringFilterInput = {
@@ -958,7 +1243,7 @@ export type GetNewsByIdQueryVariables = Exact<{
 }>;
 
 
-export type GetNewsByIdQuery = { __typename?: 'Query', newspost?: { __typename?: 'NewspostEntityResponse', data?: { __typename?: 'NewspostEntity', id?: string | null, attributes?: { __typename?: 'Newspost', body?: string | null, title: string, writtenBy?: string | null, imageUrl?: string | null, publishedAt?: any | null, createdAt?: any | null, updatedAt?: any | null, slug: string } | null } | null } | null };
+export type GetNewsByIdQuery = { __typename?: 'Query', newspost?: { __typename?: 'NewspostEntityResponse', data?: { __typename?: 'NewspostEntity', id?: string | null, attributes?: { __typename?: 'Newspost', body: string, title: string, writtenBy: string, imageUrl: string, publishedAt?: any | null, createdAt?: any | null, updatedAt?: any | null, slug: string } | null } | null } | null };
 
 export type GetNewsPostsQueryVariables = Exact<{
   filters?: InputMaybe<NewspostFiltersInput>;
@@ -966,7 +1251,7 @@ export type GetNewsPostsQueryVariables = Exact<{
 }>;
 
 
-export type GetNewsPostsQuery = { __typename?: 'Query', newsposts?: { __typename?: 'NewspostEntityResponseCollection', data: Array<{ __typename?: 'NewspostEntity', id?: string | null, attributes?: { __typename?: 'Newspost', title: string, writtenBy?: string | null, imageUrl?: string | null, publishedAt?: any | null, createdAt?: any | null, updatedAt?: any | null, slug: string } | null }> } | null };
+export type GetNewsPostsQuery = { __typename?: 'Query', newsposts?: { __typename?: 'NewspostEntityResponseCollection', data: Array<{ __typename?: 'NewspostEntity', id?: string | null, attributes?: { __typename?: 'Newspost', title: string, writtenBy: string, imageUrl: string, publishedAt?: any | null, createdAt?: any | null, updatedAt?: any | null, slug: string } | null }>, meta: { __typename?: 'ResponseCollectionMeta', pagination: { __typename?: 'Pagination', total: number, pageCount: number, pageSize: number, page: number } } } | null };
 
 
 export const GetNewsByIdDocument = gql`
@@ -1029,6 +1314,14 @@ export const GetNewsPostsDocument = gql`
         createdAt
         updatedAt
         slug
+      }
+    }
+    meta {
+      pagination {
+        total
+        pageCount
+        pageSize
+        page
       }
     }
   }

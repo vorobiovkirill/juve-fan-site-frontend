@@ -4,7 +4,6 @@ import React from 'react'
 
 const NewsPost = () => {
   const router = useRouter();
-  console.log("router===>", router);
   return (
     <>
       <Head>

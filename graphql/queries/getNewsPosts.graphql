@@ -12,5 +12,13 @@ query GetNewsPosts($filters: NewspostFiltersInput, $pagination: PaginationArg) {
                 slug
             }
         }
+        meta {
+            pagination {
+                total
+                pageCount
+                pageSize
+                page
+            }
+        }
     }
 }

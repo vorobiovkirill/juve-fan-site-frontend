@@ -1,21 +1,8 @@
 import Head from 'next/head'
-import { useGetNewsPostsQuery } from '../generated/types-and-hooks'
 import { Feed } from '@/components/Feed'
 import { Sidebar } from '@/components/Sidebar'
 
 export default function Home() {
-
-  const { data, loading } = useGetNewsPostsQuery({
-    variables: {
-      pagination: {
-        page: 1,
-        pageSize: 2
-      }
-    }
-  });
-
-  if (loading) return <div>loading...</div>;
-
   return (
     <>
       <Head>
@@ -26,7 +13,7 @@ export default function Home() {
       </Head>
 
       <Sidebar />
-      <Feed data={data?.newsposts?.data || []} />
+      <Feed />
     </>
   )
 }

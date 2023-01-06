@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }: AppContext & AppInitialPro
 
   return (
     <ApolloProvider client={apolloClient}>
-      <Layout className={`${inter.variable} font-sans p-0 m-0 min-h-screen grid grid-rows-[auto_1fr_auto]`}>
+      <Layout className={`${inter.variable} font-sans text-customBlack p-0 m-0 min-h-screen grid grid-rows-[auto_1fr_auto]`}>
         <Component {...pageProps} />
       </Layout>
     </ApolloProvider>
