@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { Feed } from '@/components/Feed'
 import { Sidebar } from '@/components/Sidebar'
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Head>
@@ -11,9 +11,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Sidebar />
-      <Feed />
+      <div className="container mx-auto mb-4 mt-4">
+        <main className="grid grid-cols-[400px_minmax(400px,_1fr)] gap-x-4">
+          <Sidebar />
+          <Feed />
+        </main>
+      </div>
     </>
   )
 }
+
+export default Home

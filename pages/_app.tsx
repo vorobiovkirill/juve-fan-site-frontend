@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import type { AppContext, AppInitialProps } from 'next/app'
 import { Inter } from '@next/font/google'
 import { ApolloProvider } from "@apollo/client"
-import { useApollo } from "@/lib/apollo-client"
+import { useApollo } from "@/lib/apolloClient"
 import { Layout } from '@/components/Layout'
 
 const inter = Inter({
