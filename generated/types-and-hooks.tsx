@@ -1238,25 +1238,25 @@ export type UsersPermissionsUserRelationResponseCollection = {
   data: Array<UsersPermissionsUserEntity>;
 };
 
-export type GetNewsByIdQueryVariables = Exact<{
+export type GetNewsPostByIdQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
 
 
-export type GetNewsByIdQuery = { __typename?: 'Query', newspost?: { __typename?: 'NewspostEntityResponse', data?: { __typename?: 'NewspostEntity', id?: string | null, attributes?: { __typename?: 'Newspost', body: string, title: string, writtenBy: string, imageUrl: string, publishedAt?: any | null, createdAt?: any | null, updatedAt?: any | null, slug: string } | null } | null } | null };
+export type GetNewsPostByIdQuery = { __typename?: 'Query', newspost?: { __typename?: 'NewspostEntityResponse', data?: { __typename?: 'NewspostEntity', id?: string | null, attributes?: { __typename?: 'Newspost', body: string, title: string, writtenBy: string, imageUrl: string, publishedAt?: any | null, createdAt?: any | null, updatedAt?: any | null, slug: string } | null } | null } | null };
 
-export type GetNewsPostsQueryVariables = Exact<{
+export type GetAllNewsPostsQueryVariables = Exact<{
   filters?: InputMaybe<NewspostFiltersInput>;
   pagination?: InputMaybe<PaginationArg>;
   sort?: InputMaybe<Array<InputMaybe<Scalars['String']>> | InputMaybe<Scalars['String']>>;
 }>;
 
 
-export type GetNewsPostsQuery = { __typename?: 'Query', newsposts?: { __typename?: 'NewspostEntityResponseCollection', data: Array<{ __typename?: 'NewspostEntity', id?: string | null, attributes?: { __typename?: 'Newspost', title: string, writtenBy: string, imageUrl: string, publishedAt?: any | null, createdAt?: any | null, updatedAt?: any | null, slug: string } | null }>, meta: { __typename?: 'ResponseCollectionMeta', pagination: { __typename?: 'Pagination', total: number, pageCount: number, pageSize: number, page: number } } } | null };
+export type GetAllNewsPostsQuery = { __typename?: 'Query', newsposts?: { __typename?: 'NewspostEntityResponseCollection', data: Array<{ __typename?: 'NewspostEntity', id?: string | null, attributes?: { __typename?: 'Newspost', title: string, writtenBy: string, imageUrl: string, publishedAt?: any | null, createdAt?: any | null, updatedAt?: any | null, slug: string } | null }>, meta: { __typename?: 'ResponseCollectionMeta', pagination: { __typename?: 'Pagination', total: number, pageCount: number, pageSize: number, page: number } } } | null };
 
 
-export const GetNewsByIdDocument = gql`
-    query GetNewsById($id: ID!) {
+export const GetNewsPostByIdDocument = gql`
+    query GetNewsPostById($id: ID!) {
   newspost(id: $id) {
     data {
       id
@@ -1276,34 +1276,34 @@ export const GetNewsByIdDocument = gql`
     `;
 
 /**
- * __useGetNewsByIdQuery__
+ * __useGetNewsPostByIdQuery__
  *
- * To run a query within a React component, call `useGetNewsByIdQuery` and pass it any options that fit your needs.
- * When your component renders, `useGetNewsByIdQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * To run a query within a React component, call `useGetNewsPostByIdQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetNewsPostByIdQuery` returns an object from Apollo Client that contains loading, error, and data properties
  * you can use to render your UI.
  *
  * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
  *
  * @example
- * const { data, loading, error } = useGetNewsByIdQuery({
+ * const { data, loading, error } = useGetNewsPostByIdQuery({
  *   variables: {
  *      id: // value for 'id'
  *   },
  * });
  */
-export function useGetNewsByIdQuery(baseOptions: Apollo.QueryHookOptions<GetNewsByIdQuery, GetNewsByIdQueryVariables>) {
+export function useGetNewsPostByIdQuery(baseOptions: Apollo.QueryHookOptions<GetNewsPostByIdQuery, GetNewsPostByIdQueryVariables>) {
         const options = {...defaultOptions, ...baseOptions}
-        return Apollo.useQuery<GetNewsByIdQuery, GetNewsByIdQueryVariables>(GetNewsByIdDocument, options);
+        return Apollo.useQuery<GetNewsPostByIdQuery, GetNewsPostByIdQueryVariables>(GetNewsPostByIdDocument, options);
       }
-export function useGetNewsByIdLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetNewsByIdQuery, GetNewsByIdQueryVariables>) {
+export function useGetNewsPostByIdLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetNewsPostByIdQuery, GetNewsPostByIdQueryVariables>) {
           const options = {...defaultOptions, ...baseOptions}
-          return Apollo.useLazyQuery<GetNewsByIdQuery, GetNewsByIdQueryVariables>(GetNewsByIdDocument, options);
+          return Apollo.useLazyQuery<GetNewsPostByIdQuery, GetNewsPostByIdQueryVariables>(GetNewsPostByIdDocument, options);
         }
-export type GetNewsByIdQueryHookResult = ReturnType<typeof useGetNewsByIdQuery>;
-export type GetNewsByIdLazyQueryHookResult = ReturnType<typeof useGetNewsByIdLazyQuery>;
-export type GetNewsByIdQueryResult = Apollo.QueryResult<GetNewsByIdQuery, GetNewsByIdQueryVariables>;
-export const GetNewsPostsDocument = gql`
-    query GetNewsPosts($filters: NewspostFiltersInput, $pagination: PaginationArg, $sort: [String]) {
+export type GetNewsPostByIdQueryHookResult = ReturnType<typeof useGetNewsPostByIdQuery>;
+export type GetNewsPostByIdLazyQueryHookResult = ReturnType<typeof useGetNewsPostByIdLazyQuery>;
+export type GetNewsPostByIdQueryResult = Apollo.QueryResult<GetNewsPostByIdQuery, GetNewsPostByIdQueryVariables>;
+export const GetAllNewsPostsDocument = gql`
+    query GetAllNewsPosts($filters: NewspostFiltersInput, $pagination: PaginationArg, $sort: [String]) {
   newsposts(filters: $filters, pagination: $pagination, sort: $sort) {
     data {
       id
@@ -1330,16 +1330,16 @@ export const GetNewsPostsDocument = gql`
     `;
 
 /**
- * __useGetNewsPostsQuery__
+ * __useGetAllNewsPostsQuery__
  *
- * To run a query within a React component, call `useGetNewsPostsQuery` and pass it any options that fit your needs.
- * When your component renders, `useGetNewsPostsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * To run a query within a React component, call `useGetAllNewsPostsQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetAllNewsPostsQuery` returns an object from Apollo Client that contains loading, error, and data properties
  * you can use to render your UI.
  *
  * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
  *
  * @example
- * const { data, loading, error } = useGetNewsPostsQuery({
+ * const { data, loading, error } = useGetAllNewsPostsQuery({
  *   variables: {
  *      filters: // value for 'filters'
  *      pagination: // value for 'pagination'
@@ -1347,14 +1347,14 @@ export const GetNewsPostsDocument = gql`
  *   },
  * });
  */
-export function useGetNewsPostsQuery(baseOptions?: Apollo.QueryHookOptions<GetNewsPostsQuery, GetNewsPostsQueryVariables>) {
+export function useGetAllNewsPostsQuery(baseOptions?: Apollo.QueryHookOptions<GetAllNewsPostsQuery, GetAllNewsPostsQueryVariables>) {
         const options = {...defaultOptions, ...baseOptions}
-        return Apollo.useQuery<GetNewsPostsQuery, GetNewsPostsQueryVariables>(GetNewsPostsDocument, options);
+        return Apollo.useQuery<GetAllNewsPostsQuery, GetAllNewsPostsQueryVariables>(GetAllNewsPostsDocument, options);
       }
-export function useGetNewsPostsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetNewsPostsQuery, GetNewsPostsQueryVariables>) {
+export function useGetAllNewsPostsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetAllNewsPostsQuery, GetAllNewsPostsQueryVariables>) {
           const options = {...defaultOptions, ...baseOptions}
-          return Apollo.useLazyQuery<GetNewsPostsQuery, GetNewsPostsQueryVariables>(GetNewsPostsDocument, options);
+          return Apollo.useLazyQuery<GetAllNewsPostsQuery, GetAllNewsPostsQueryVariables>(GetAllNewsPostsDocument, options);
         }
-export type GetNewsPostsQueryHookResult = ReturnType<typeof useGetNewsPostsQuery>;
-export type GetNewsPostsLazyQueryHookResult = ReturnType<typeof useGetNewsPostsLazyQuery>;
-export type GetNewsPostsQueryResult = Apollo.QueryResult<GetNewsPostsQuery, GetNewsPostsQueryVariables>;
+export type GetAllNewsPostsQueryHookResult = ReturnType<typeof useGetAllNewsPostsQuery>;
+export type GetAllNewsPostsLazyQueryHookResult = ReturnType<typeof useGetAllNewsPostsLazyQuery>;
+export type GetAllNewsPostsQueryResult = Apollo.QueryResult<GetAllNewsPostsQuery, GetAllNewsPostsQueryVariables>;

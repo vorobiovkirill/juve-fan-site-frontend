@@ -8,7 +8,8 @@ const config: CodegenConfig = {
   generates: {
     "generated/types-and-hooks.tsx": {
       plugins: ['typescript', 'typescript-operations', 'typescript-react-apollo']
-    }
+    },
+
   }
 };
 

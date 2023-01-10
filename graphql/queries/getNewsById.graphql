@@ -1,4 +1,4 @@
-query GetNewsById($id: ID!) {
+query GetNewsPostById($id: ID!) {
     newspost(id: $id) {
         data {
             id

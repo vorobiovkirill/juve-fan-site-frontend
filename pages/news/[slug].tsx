@@ -1,9 +1,28 @@
+import { LayoutForNewsPost } from '@/components/common/LayoutForNewsPost';
+import { useGetNewsPostByIdQuery } from 'generated/types-and-hooks';
 import Head from 'next/head'
 import { useRouter } from 'next/router';
+// import Image from 'next/image'
 import React from 'react'
+import ReactMarkdown from "react-markdown";
 
 const NewsPost = () => {
-  const router = useRouter();
+
+  const router = useRouter()
+  const { id } = router.query
+
+  console.log('router.query', router.query)
+
+  const { data, loading } = useGetNewsPostByIdQuery({
+    variables: {
+      id: id as string
+    }
+  })
+
+  if (loading) return <div>Loading....</div>
+
+  const news = data?.newspost?.data?.attributes
+
   return (
     <>
       <Head>
@@ -14,9 +33,21 @@ const NewsPost = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>HELLO</div>
+
+      <article className="p-4">
+        <h2 className="text-3xl font-bold dark:text-white mb-4 border-b border-gray-200">{news?.title}</h2>
+        <p>{news?.writtenBy}</p>
+        {/* <Image src={news?.imageUrl} alt={news?.slug} width={100} height={100} /> */}
+        <img src={news?.imageUrl} alt={news?.slug} />
+        <ReactMarkdown children={news?.body || ''}  />
+      </article>
+
     </>
   )
 }
 
 export default NewsPost
+
+NewsPost.getLayout = function getLayout(page: React.ReactElement) {
+  return <LayoutForNewsPost>{page}</LayoutForNewsPost>;
+};

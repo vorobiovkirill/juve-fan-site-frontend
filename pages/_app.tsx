@@ -1,23 +1,27 @@
 import '../styles/globals.css'
-import type { AppContext, AppInitialProps } from 'next/app'
-import { Inter } from '@next/font/google'
+import type { AppProps } from 'next/app'
 import { ApolloProvider } from "@apollo/client"
 import { useApollo } from "@/lib/apolloClient"
-import { Layout } from '@/components/Layout'
+import { NextPage } from 'next/types';
+import { ReactElement, ReactNode } from 'react';
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-})
+type NextPageWithLayout = NextPage & {
+  getLayout?: (page: ReactElement) => ReactNode;
+};
 
-export default function App({ Component, pageProps }: AppContext & AppInitialProps) {
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout;
+};
+
+export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const apolloClient = useApollo(pageProps);
+
+  const getLayout = Component.getLayout ?? ((page) => page);
+  const layout = getLayout(<Component {...pageProps} />);
 
   return (
     <ApolloProvider client={apolloClient}>
-      <Layout className={`${inter.variable} font-sans text-customBlack p-0 m-0 min-h-screen grid grid-rows-[auto_1fr_auto]`}>
-        <Component {...pageProps} />
-      </Layout>
+      {layout}
     </ApolloProvider>
   )
 }
