@@ -11,8 +11,6 @@ const NewsPost = () => {
   const router = useRouter()
   const { id } = router.query
 
-  console.log('router.query', router.query)
-
   const { data, loading } = useGetNewsPostByIdQuery({
     variables: {
       id: id as string
