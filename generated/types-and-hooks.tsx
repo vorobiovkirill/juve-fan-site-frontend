@@ -1248,6 +1248,7 @@ export type GetNewsByIdQuery = { __typename?: 'Query', newspost?: { __typename?:
 export type GetNewsPostsQueryVariables = Exact<{
   filters?: InputMaybe<NewspostFiltersInput>;
   pagination?: InputMaybe<PaginationArg>;
+  sort?: InputMaybe<Array<InputMaybe<Scalars['String']>> | InputMaybe<Scalars['String']>>;
 }>;
 
 
@@ -1302,8 +1303,8 @@ export type GetNewsByIdQueryHookResult = ReturnType<typeof useGetNewsByIdQuery>;
 export type GetNewsByIdLazyQueryHookResult = ReturnType<typeof useGetNewsByIdLazyQuery>;
 export type GetNewsByIdQueryResult = Apollo.QueryResult<GetNewsByIdQuery, GetNewsByIdQueryVariables>;
 export const GetNewsPostsDocument = gql`
-    query GetNewsPosts($filters: NewspostFiltersInput, $pagination: PaginationArg) {
-  newsposts(filters: $filters, pagination: $pagination) {
+    query GetNewsPosts($filters: NewspostFiltersInput, $pagination: PaginationArg, $sort: [String]) {
+  newsposts(filters: $filters, pagination: $pagination, sort: $sort) {
     data {
       id
       attributes {
@@ -1342,6 +1343,7 @@ export const GetNewsPostsDocument = gql`
  *   variables: {
  *      filters: // value for 'filters'
  *      pagination: // value for 'pagination'
+ *      sort: // value for 'sort'
  *   },
  * });
  */

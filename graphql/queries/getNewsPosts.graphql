@@ -1,5 +1,5 @@
-query GetNewsPosts($filters: NewspostFiltersInput, $pagination: PaginationArg) {
-    newsposts(filters: $filters, pagination: $pagination) {
+query GetNewsPosts($filters: NewspostFiltersInput, $pagination: PaginationArg, $sort: [String]) {
+    newsposts(filters: $filters, pagination: $pagination, sort: $sort) {
         data {
             id
             attributes {

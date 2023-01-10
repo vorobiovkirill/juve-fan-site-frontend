@@ -12,8 +12,9 @@ export const Feed = () => {
     variables: {
       pagination: {
         page: currentPage,
-        pageSize: 2
-      }
+        pageSize: 10
+      },
+      sort: ["createdAt:desc"]
     }
   });
 
@@ -35,10 +36,19 @@ export const Feed = () => {
   }
 
   return (
-    <section className="bg-gray-100 p-4">
-      <h2 className="text-3xl font-bold dark:text-white mb-4">Новини</h2>
-      <div className="flex gap-x-4 mb-8">
-        {feed?.map((item) => <FeedItem key={item.id} title={item.attributes?.title || ''} slug={item.attributes?.slug || ''} />)}
+    <section className="p-4">
+      <h2 className="text-3xl font-bold dark:text-white mb-4 border-b border-gray-200">Новини</h2>
+      <div className="mb-8">
+        {feed?.map((item) => {
+          return (
+            <FeedItem
+              key={item.id}
+              createdAt={item.attributes?.createdAt}
+              imageUrl={item.attributes?.imageUrl || ''}
+              title={item.attributes?.title || ''}
+              slug={item.attributes?.slug || ''}
+            />)
+        })}
       </div>
       <Pagination
         currentPage={currentPage}
