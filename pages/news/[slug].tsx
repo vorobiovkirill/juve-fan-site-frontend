@@ -1,10 +1,9 @@
-import { LayoutForNewsPost } from '@/components/common/LayoutForNewsPost';
-import { useGetNewsPostByIdQuery } from 'generated/types-and-hooks';
+import { LayoutForNewsPost } from '@/components/common/LayoutForNewsPost'
+import { useGetNewsPostByIdQuery } from 'generated/types-and-hooks'
 import Head from 'next/head'
-import { useRouter } from 'next/router';
-// import Image from 'next/image'
+import { useRouter } from 'next/router'
 import React from 'react'
-import ReactMarkdown from "react-markdown";
+import ReactMarkdown from "react-markdown"
 
 const NewsPost = () => {
 
@@ -35,11 +34,9 @@ const NewsPost = () => {
       <article className="p-4">
         <h2 className="text-3xl font-bold dark:text-white mb-4 border-b border-gray-200">{news?.title}</h2>
         <p>{news?.writtenBy}</p>
-        {/* <Image src={news?.imageUrl} alt={news?.slug} width={100} height={100} /> */}
         <img src={news?.imageUrl} alt={news?.slug} />
         <ReactMarkdown children={news?.body || ''}  />
       </article>
-
     </>
   )
 }
