@@ -241,7 +241,31 @@ export type FloatFilterInput = {
   startsWith?: InputMaybe<Scalars['Float']>;
 };
 
-export type GenericMorph = CommentsComment | CommentsCommentReport | I18NLocale | Newspost | SlugifySlug | UploadFile | UploadFolder | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser;
+export type GenericMorph = CommentsComment | CommentsCommentReport | HomePage | I18NLocale | Newspost | SlugifySlug | UploadFile | UploadFolder | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser;
+
+export type HomePage = {
+  __typename?: 'HomePage';
+  createdAt?: Maybe<Scalars['DateTime']>;
+  description?: Maybe<Scalars['String']>;
+  title: Scalars['String'];
+  updatedAt?: Maybe<Scalars['DateTime']>;
+};
+
+export type HomePageEntity = {
+  __typename?: 'HomePageEntity';
+  attributes?: Maybe<HomePage>;
+  id?: Maybe<Scalars['ID']>;
+};
+
+export type HomePageEntityResponse = {
+  __typename?: 'HomePageEntityResponse';
+  data?: Maybe<HomePageEntity>;
+};
+
+export type HomePageInput = {
+  description?: InputMaybe<Scalars['String']>;
+  title?: InputMaybe<Scalars['String']>;
+};
 
 export type I18NLocale = {
   __typename?: 'I18NLocale';
@@ -367,6 +391,7 @@ export type Mutation = {
   createUsersPermissionsUser: UsersPermissionsUserEntityResponse;
   deleteCommentsComment?: Maybe<CommentsCommentEntityResponse>;
   deleteCommentsCommentReport?: Maybe<CommentsCommentReportEntityResponse>;
+  deleteHomePage?: Maybe<HomePageEntityResponse>;
   deleteNewspost?: Maybe<NewspostEntityResponse>;
   deleteSlugifySlug?: Maybe<SlugifySlugEntityResponse>;
   deleteUploadFile?: Maybe<UploadFileEntityResponse>;
@@ -389,6 +414,7 @@ export type Mutation = {
   updateCommentsComment?: Maybe<CommentsCommentEntityResponse>;
   updateCommentsCommentReport?: Maybe<CommentsCommentReportEntityResponse>;
   updateFileInfo: UploadFileEntityResponse;
+  updateHomePage?: Maybe<HomePageEntityResponse>;
   updateNewspost?: Maybe<NewspostEntityResponse>;
   updateSlugifySlug?: Maybe<SlugifySlugEntityResponse>;
   updateUploadFile?: Maybe<UploadFileEntityResponse>;
@@ -546,6 +572,11 @@ export type MutationUpdateFileInfoArgs = {
 };
 
 
+export type MutationUpdateHomePageArgs = {
+  data: HomePageInput;
+};
+
+
 export type MutationUpdateNewspostArgs = {
   data: NewspostInput;
   id: Scalars['ID'];
@@ -669,6 +700,7 @@ export type Query = {
   commentsCommentReport?: Maybe<CommentsCommentReportEntityResponse>;
   commentsCommentReports?: Maybe<CommentsCommentReportEntityResponseCollection>;
   commentsComments?: Maybe<CommentsCommentEntityResponseCollection>;
+  homePage?: Maybe<HomePageEntityResponse>;
   i18NLocale?: Maybe<I18NLocaleEntityResponse>;
   i18NLocales?: Maybe<I18NLocaleEntityResponseCollection>;
   me?: Maybe<UsersPermissionsMe>;
@@ -1238,6 +1270,11 @@ export type UsersPermissionsUserRelationResponseCollection = {
   data: Array<UsersPermissionsUserEntity>;
 };
 
+export type GetHomePageDataQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetHomePageDataQuery = { __typename?: 'Query', homePage?: { __typename?: 'HomePageEntityResponse', data?: { __typename?: 'HomePageEntity', id?: string | null, attributes?: { __typename?: 'HomePage', title: string, description?: string | null } | null } | null } | null };
+
 export type GetNewsPostByIdQueryVariables = Exact<{
   id: Scalars['ID'];
 }>;
@@ -1255,6 +1292,46 @@ export type GetAllNewsPostsQueryVariables = Exact<{
 export type GetAllNewsPostsQuery = { __typename?: 'Query', newsposts?: { __typename?: 'NewspostEntityResponseCollection', data: Array<{ __typename?: 'NewspostEntity', id?: string | null, attributes?: { __typename?: 'Newspost', title: string, writtenBy: string, imageUrl: string, publishedAt?: any | null, createdAt?: any | null, updatedAt?: any | null, slug: string } | null }>, meta: { __typename?: 'ResponseCollectionMeta', pagination: { __typename?: 'Pagination', total: number, pageCount: number, pageSize: number, page: number } } } | null };
 
 
+export const GetHomePageDataDocument = gql`
+    query GetHomePageData {
+  homePage {
+    data {
+      id
+      attributes {
+        title
+        description
+      }
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetHomePageDataQuery__
+ *
+ * To run a query within a React component, call `useGetHomePageDataQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetHomePageDataQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetHomePageDataQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useGetHomePageDataQuery(baseOptions?: Apollo.QueryHookOptions<GetHomePageDataQuery, GetHomePageDataQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<GetHomePageDataQuery, GetHomePageDataQueryVariables>(GetHomePageDataDocument, options);
+      }
+export function useGetHomePageDataLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetHomePageDataQuery, GetHomePageDataQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<GetHomePageDataQuery, GetHomePageDataQueryVariables>(GetHomePageDataDocument, options);
+        }
+export type GetHomePageDataQueryHookResult = ReturnType<typeof useGetHomePageDataQuery>;
+export type GetHomePageDataLazyQueryHookResult = ReturnType<typeof useGetHomePageDataLazyQuery>;
+export type GetHomePageDataQueryResult = Apollo.QueryResult<GetHomePageDataQuery, GetHomePageDataQueryVariables>;
 export const GetNewsPostByIdDocument = gql`
     query GetNewsPostById($id: ID!) {
   newspost(id: $id) {

@@ -37,9 +37,9 @@ export const Feed = () => {
 
   return (
     <main>
-      <section className="p-4 bg-white">
+      <section className="p-4">
         <h2 className="text-3xl font-bold dark:text-white mb-4 border-b border-gray-200">Новини</h2>
-        <div className="mb-8">
+        <div className="mb-8 flex flex-wrap gap-y-4">
           {feed?.map((item) => {
             return (
               <FeedItem

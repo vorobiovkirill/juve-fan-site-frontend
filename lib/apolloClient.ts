@@ -3,6 +3,7 @@ import { ApolloClient, HttpLink, InMemoryCache, NormalizedCacheObject } from '@a
 import { offsetLimitPagination } from '@apollo/client/utilities';
 import merge from 'deepmerge';
 import isEqual from 'lodash/isEqual';
+import { AppProps } from 'next/app';
 
 export const APOLLO_STATE_PROP_NAME = '__APOLLO_STATE__';
 
@@ -64,7 +65,7 @@ export const initializeApollo = (initialState: NormalizedCacheObject | null = nu
     return _apolloClient;
 };
 
-export const addApolloState = (client: ApolloClient<NormalizedCacheObject>, pageProps: any) => {
+export const addApolloState = (client: ApolloClient<NormalizedCacheObject>, pageProps: AppProps['pageProps']) => {
     if (pageProps?.props) {
         pageProps.props[APOLLO_STATE_PROP_NAME] = client.cache.extract();
     }
@@ -72,7 +73,7 @@ export const addApolloState = (client: ApolloClient<NormalizedCacheObject>, page
     return pageProps;
 };
 
-export const useApollo = (pageProps: any) => {
+export const useApollo = (pageProps: AppProps['pageProps']) => {
     const state = pageProps[APOLLO_STATE_PROP_NAME];
     const store = useMemo(() => initializeApollo(state), [state]);
     return store;
