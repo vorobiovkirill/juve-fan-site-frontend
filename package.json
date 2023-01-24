@@ -1,7 +1,6 @@
 {
   "name": "juve-fan-site-frontend",
   "version": "0.1.0",
-  "private": true,
   "homepage": "https://github.com/vorobiovkirill/juve-fan-site-frontend",
   "scripts": {
     "predev": "npm run generate:codegen",
