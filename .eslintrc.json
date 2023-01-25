@@ -1,7 +1,6 @@
 {
   "extends": "next/core-web-vitals",
   "rules": {
-    "react/no-children-prop": "off",
-    "@typescript-eslint/consistent-type-imports": "warn"
+    "react/no-children-prop": "off"
   }
 }
