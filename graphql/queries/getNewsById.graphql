@@ -1,0 +1,17 @@
+query GetNewsPostById($id: ID!) {
+    newspost(id: $id) {
+        data {
+            id
+            attributes {
+                body
+                title
+                writtenBy
+                imageUrl
+                publishedAt
+                createdAt
+                updatedAt
+                slug
+            }
+        }
+    }
+}

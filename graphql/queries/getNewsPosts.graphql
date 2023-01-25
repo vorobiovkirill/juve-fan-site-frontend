@@ -1,0 +1,24 @@
+query GetAllNewsPosts($filters: NewspostFiltersInput, $pagination: PaginationArg, $sort: [String]) {
+    newsposts(filters: $filters, pagination: $pagination, sort: $sort) {
+        data {
+            id
+            attributes {
+                title
+                writtenBy
+                imageUrl
+                publishedAt
+                createdAt
+                updatedAt
+                slug
+            }
+        }
+        meta {
+            pagination {
+                total
+                pageCount
+                pageSize
+                page
+            }
+        }
+    }
+}
