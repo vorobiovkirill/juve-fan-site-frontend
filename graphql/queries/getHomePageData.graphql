@@ -1,11 +1,13 @@
 query GetHomePageData {
-    homePage {
-        data {
-            id
-            attributes {
-                title
-                description
-            }
-        }
+  homePage {
+    data {
+      id
+      attributes {
+        title
+        description
+        feedTitle
+        standingsTitle
+      }
     }
+  }
 }

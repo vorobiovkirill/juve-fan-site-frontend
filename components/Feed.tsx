@@ -4,7 +4,11 @@ import { useGetAllNewsPostsQuery } from '../generated/types-and-hooks'
 import { Pagination } from '@/components/Pagination'
 import { FeedItem } from '@/components/FeedItem'
 
-export const Feed = () => {
+interface IFeed {
+  title: string
+}
+
+export const Feed: React.FC<IFeed> = ({ title }) => {
   const [currentPage, setCurrentPage] = useState(1)
 
   const { data, loading } = useGetAllNewsPostsQuery({
@@ -38,7 +42,7 @@ export const Feed = () => {
     <main>
       <section className='bg-white p-4'>
         <h2 className='text-3xl font-bold dark:text-white mb-4 border-b border-gray-200'>
-          Новини
+          {title}
         </h2>
         <div className='mb-8 flex flex-wrap gap-y-4'>
           {feed?.map((item) => {

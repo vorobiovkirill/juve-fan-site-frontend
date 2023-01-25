@@ -1,8 +1,12 @@
 import json from '../mocks/standings.json'
-import { SeasonStandings } from './widgets/standings/Standings'
+import { Standings } from './widgets/standings/Standings'
 // import { useGetStandings } from 'api/useRequest';
 
-export const Sidebar = () => {
+interface ISidebar {
+  standingsTitle: string
+}
+
+export const Sidebar: React.FC<ISidebar> = ({ standingsTitle }) => {
   // const { standings, error, isLoading } = useGetStandings('/standings?season=2022&league=135');
 
   // if (error) return <div>Failed to fetch users.</div>;
@@ -12,7 +16,7 @@ export const Sidebar = () => {
 
   return (
     <aside aria-label='Sidebar'>
-      <SeasonStandings standings={standings} />
+      <Standings standings={standings} standingsTitle={standingsTitle} />
     </aside>
   )
 }

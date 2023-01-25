@@ -1,7 +1,3 @@
-export interface ISeasonStandings {
-  standings: IStandingItem[]
-}
-
 export interface IFootballApiResponse {
   get: string
   parameters: IParameters
