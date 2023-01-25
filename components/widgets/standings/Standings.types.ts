@@ -1,70 +1,70 @@
 export interface ISeasonStandings {
-    standings: IStandingItem[];
+  standings: IStandingItem[]
 }
 
 export interface IStandingTeam {
-    id: number;
-    name: string;
-    logo: string;
+  id: number
+  name: string
+  logo: string
 }
 
 export interface IStandingItem {
-    rank: number;
-    team: IStandingTeam;
-    points: number;
-    goalsDiff: number;
-    group: string;
-    form: string;
-    status: string;
-    description: string | null;
-    all: IStatistic;
-    home: IStatistic;
-    away: IStatistic;
-    update: string;
+  rank: number
+  team: IStandingTeam
+  points: number
+  goalsDiff: number
+  group: string
+  form: string
+  status: string
+  description: string | null
+  all: IStatistic
+  home: IStatistic
+  away: IStatistic
+  update: string
 }
 
 export interface IGoal {
-    for: number;
-    against: number;
+  for: number
+  against: number
 }
 
 export interface IStatistic {
-    played: number;
-    win: number;
-    draw: number;
-    lose: number;
-    goals: IGoal;
+  played: number
+  win: number
+  draw: number
+  lose: number
+  goals: IGoal
 }
 
 export interface IParameters {
-    league: string;
-    season: string;
+  league: string
+  season: string
 }
 
 export interface IPaging {
-    current: number;
-    total: number;
+  current: number
+  total: number
 }
 
 export interface IResponse {
-    league: IResponseLeague;
+  league: IResponseLeague
 }
 
 export interface IResponseLeague {
-    id: number;
-    name: string;
-    country: string;
-    logo: string;
-    flag: string;
-    season: number;
-    standings: Array<Array<IStandingItem>>;
+  id: number
+  name: string
+  country: string
+  logo: string
+  flag: string
+  season: number
+  standings: Array<Array<IStandingItem>>
 }
 
 export interface IFootballApiResponse {
-    get: string;
-    parameters: IParameters;
-    errors: any[];
-    results: number;
-    paging: IPaging;
-    response: IResponse[];
+  get: string
+  parameters: IParameters
+  errors: unknown[]
+  results: number
+  paging: IPaging
+  response: IResponse[]
 }

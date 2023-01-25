@@ -24,28 +24,28 @@ const stylesForEuropaLeague = `
 `
 
 export const StandingItem = ({ item }: { item: IStandingItem }) => {
-	const isActive =
-		item.team.name === 'Juventus'
-			? 'bg-customYellow hover:bg-customYellowHover font-bold'
-			: ''
-	return (
-		<div
-			className={`${isActive} flex items-center py-1.5 border-b border-gray-200 relative hover:bg-gray-100 ${stylesForChampionsLeague} ${stylesForEuropaLeague}`}
-		>
-			<span className="w-10 text-center">{item.rank}</span>
-			<div className="flex-1">
-				<div className="flex items-center gap-x-4">
-					<Image
-						src={item.team.logo}
-						alt={item.team.name}
-						width={25}
-						height={25}
-					/>
-					<span>{item.team.name}</span>
-				</div>
-			</div>
-			<span className="w-10 text-center">{item.all.played}</span>
-			<span className="w-10 text-center">{item.points}</span>
-		</div>
-	)
+  const isActive =
+    item.team.name === 'Juventus'
+      ? 'bg-customYellow hover:bg-customYellowHover font-bold'
+      : ''
+  return (
+    <div
+      className={`${isActive} flex items-center py-1.5 border-b border-gray-200 relative hover:bg-gray-100 ${stylesForChampionsLeague} ${stylesForEuropaLeague}`}
+    >
+      <span className='w-10 text-center'>{item.rank}</span>
+      <div className='flex-1'>
+        <div className='flex items-center gap-x-4'>
+          <Image
+            src={item.team.logo}
+            alt={item.team.name}
+            width={25}
+            height={25}
+          />
+          <span>{item.team.name}</span>
+        </div>
+      </div>
+      <span className='w-10 text-center'>{item.all.played}</span>
+      <span className='w-10 text-center'>{item.points}</span>
+    </div>
+  )
 }
