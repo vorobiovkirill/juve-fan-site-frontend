@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
-import { useGetAllNewsPostsQuery } from '../generated/types-and-hooks';
-import { Pagination } from '@/components/Pagination';
-import { FeedItem } from '@/components/FeedItem';
+import { useGetAllNewsPostsQuery } from '../generated/types-and-hooks'
+import { Pagination } from '@/components/Pagination'
+import { FeedItem } from '@/components/FeedItem'
 
 export const Feed = () => {
-    const [currentPage, setCurrentPage] = useState(1);
+    const [currentPage, setCurrentPage] = useState(1)
 
     const { data, loading } = useGetAllNewsPostsQuery({
         variables: {
@@ -15,29 +15,31 @@ export const Feed = () => {
             },
             sort: ['createdAt:desc'],
         },
-    });
+    })
 
-    if (loading) return <div>loading...</div>;
+    if (loading) return <div>loading...</div>
 
-    const feed = data?.newsposts?.data;
-    const pagination = data?.newsposts?.meta.pagination;
+    const feed = data?.newsposts?.data
+    const pagination = data?.newsposts?.meta.pagination
 
     const onPageChange = (page: number): void => {
-        setCurrentPage(page);
-    };
+        setCurrentPage(page)
+    }
 
     const onPageBack = (): void => {
-        setCurrentPage((prevState) => prevState - 1);
-    };
+        setCurrentPage((prevState) => prevState - 1)
+    }
 
     const onPageNext = (): void => {
-        setCurrentPage((prevState) => prevState + 1);
-    };
+        setCurrentPage((prevState) => prevState + 1)
+    }
 
     return (
         <main>
             <section className='bg-white p-4'>
-                <h2 className='text-3xl font-bold dark:text-white mb-4 border-b border-gray-200'>Новини</h2>
+                <h2 className='text-3xl font-bold dark:text-white mb-4 border-b border-gray-200'>
+                    Новини
+                </h2>
                 <div className='mb-8 flex flex-wrap gap-y-4'>
                     {feed?.map((item) => {
                         return (
@@ -49,7 +51,7 @@ export const Feed = () => {
                                 title={item.attributes?.title || ''}
                                 slug={item.attributes?.slug || ''}
                             />
-                        );
+                        )
                     })}
                 </div>
                 <Pagination
@@ -61,5 +63,5 @@ export const Feed = () => {
                 />
             </section>
         </main>
-    );
-};
+    )
+}

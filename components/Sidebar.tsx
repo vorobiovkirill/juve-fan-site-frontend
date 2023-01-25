@@ -1,5 +1,5 @@
-import json from '../mocks/standings.json';
-import { SeasonStandings } from './widgets/standings/Standings';
+import json from '../mocks/standings.json'
+import { SeasonStandings } from './widgets/standings/Standings'
 // import { useGetStandings } from 'api/useRequest';
 
 export const Sidebar = () => {
@@ -8,11 +8,11 @@ export const Sidebar = () => {
     // if (error) return <div>Failed to fetch users.</div>;
     // if (isLoading) return <h2>Loading...</h2>;
 
-    const standings = json?.response[0].league.standings.flat() || [];
+    const standings = json?.response[0].league.standings.flat() || []
 
     return (
         <aside aria-label='Sidebar'>
             <SeasonStandings standings={standings} />
         </aside>
-    );
-};
+    )
+}
