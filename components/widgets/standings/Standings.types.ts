@@ -16,7 +16,7 @@ export interface IStandingItem {
     group: string;
     form: string;
     status: string;
-    description: string;
+    description: string | null;
     all: IStatistic;
     home: IStatistic;
     away: IStatistic;

@@ -13,6 +13,10 @@ module.exports = {
       customBlack: '#010101',
       customGray: '#66615e',
       customYellow: '#fec72e',
+      customYellowHover: '#c79800',
+      championsLeague: '#3562a6',
+      europaLeague: '#f1c062',
+
     },
     extend: {
       fontFamily: {

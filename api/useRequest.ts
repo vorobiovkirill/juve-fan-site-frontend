@@ -1,5 +1,5 @@
 import useSWR from 'swr';
-import type { IFootballApiResponse } from '@/components/SeasonStandings/SeasonStandings.types';
+import type { IFootballApiResponse } from '@/components/widgets/standings/Standings.types';
 
 const options = {
     method: 'GET',
