@@ -1,4 +1,4 @@
-const optionsConfig: Record<optionsConfigKeys, any> = {
+const optionsConfig: Record<OptionsConfigKeys, Intl.DateTimeFormatOptions> = {
   publishDate: {
     year: 'numeric',
     month: 'long',
@@ -15,11 +15,11 @@ const optionsConfig: Record<optionsConfigKeys, any> = {
   },
 }
 
-type optionsConfigKeys = 'publishDate' | 'allNewsFormat'
+type OptionsConfigKeys = 'publishDate' | 'allNewsFormat'
 
 export const getPublishDate = (
   createdAt: Date | string,
-  format: optionsConfigKeys
+  format: OptionsConfigKeys
 ): string => {
   const date = new Date(createdAt)
 
