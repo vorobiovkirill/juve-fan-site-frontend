@@ -1,29 +1,10 @@
-export interface IFootballApiResponse {
-  get: string
-  parameters: IParameters
-  errors: IError[]
-  results: number
-  paging: IPaging
-  response: IResponse[]
+import type { IRapidApiResponse } from 'api/types'
+
+export interface IStandings extends IRapidApiResponse {
+  response: IStandingsResponse[]
 }
 
-export interface IParameters {
-  league: string
-  season: string
-}
-
-export interface IError {
-  time: string
-  bug: string
-  report: string
-}
-
-export interface IPaging {
-  current: number
-  total: number
-}
-
-export interface IResponse {
+export interface IStandingsResponse {
   league: IResponseLeague
 }
 

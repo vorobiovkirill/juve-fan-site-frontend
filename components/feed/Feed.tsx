@@ -1,14 +1,12 @@
 import { useState } from 'react'
 
-import { useGetAllNewsPostsQuery } from '../generated/types-and-hooks'
+import { useGetAllNewsPostsQuery } from '@/generated/types-and-hooks'
 import { Pagination } from '@/components/Pagination'
-import { FeedItem } from '@/components/FeedItem'
+import { CardFeed } from '@/components/feed/CardFeed'
+import { ListFeed } from '@/components/feed/ListFeed'
+import type { IFeed } from '@/components/feed/Feed.types'
 
-interface IFeed {
-  title: string
-}
-
-export const Feed: React.FC<IFeed> = ({ title }) => {
+export const Feed: React.FC<IFeed> = ({ title, view = 'default' }) => {
   const [currentPage, setCurrentPage] = useState(1)
 
   const { data, loading } = useGetAllNewsPostsQuery({
@@ -20,8 +18,6 @@ export const Feed: React.FC<IFeed> = ({ title }) => {
       sort: ['createdAt:desc'],
     },
   })
-
-  if (loading) return <div>loading...</div>
 
   const feed = data?.newsposts?.data
   const pagination = data?.newsposts?.meta.pagination
@@ -38,26 +34,15 @@ export const Feed: React.FC<IFeed> = ({ title }) => {
     setCurrentPage((prevState) => prevState + 1)
   }
 
+  if (loading) return <div>loading...</div>
+
   return (
     <main>
       <section className='bg-white p-4'>
-        <h2 className='text-3xl font-bold dark:text-white mb-4 border-b border-gray-200'>
-          {title}
-        </h2>
-        <div className='mb-8 flex flex-wrap gap-y-4'>
-          {feed?.map((item) => {
-            return (
-              <FeedItem
-                key={item.id}
-                id={item.id}
-                createdAt={item.attributes?.createdAt}
-                imageUrl={item.attributes?.imageUrl || ''}
-                title={item.attributes?.title || ''}
-                slug={item.attributes?.slug || ''}
-              />
-            )
-          })}
-        </div>
+        {view === 'default' || view === 'cards' ? (
+          <CardFeed feed={feed} title={title} />
+        ) : null}
+        {view === 'list' ? <ListFeed feed={feed} title={title} /> : null}
         <Pagination
           currentPage={currentPage}
           pageCount={pagination?.pageCount || 1}

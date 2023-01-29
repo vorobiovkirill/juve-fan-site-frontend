@@ -1,22 +1,25 @@
-import json from '../mocks/standings.json'
+import scoresJson from '../mocks/scores.json'
+import { TopScores } from './widgets/top-scores/TopScores'
 import { Standings } from './widgets/standings/Standings'
-// import { useGetStandings } from 'api/useRequest';
+import { getTopScores } from '@/utils/getTopScores'
+import { ITopScoresResponse } from './widgets/top-scores/TopScores.types'
 
 interface ISidebar {
   standingsTitle: string
+  topScoresTitle: string
 }
 
-export const Sidebar: React.FC<ISidebar> = ({ standingsTitle }) => {
-  // const { standings, error, isLoading } = useGetStandings('/standings?season=2022&league=135');
-
-  // if (error) return <div>Failed to fetch users.</div>;
-  // if (isLoading) return <h2>Loading...</h2>;
-
-  const standings = json?.response[0].league.standings.flat() || []
+export const Sidebar: React.FC<ISidebar> = ({
+  standingsTitle,
+  topScoresTitle,
+}) => {
+  const scores = getTopScores(scoresJson.response as ITopScoresResponse[])
+  console.log('scores', scores)
 
   return (
     <aside aria-label='Sidebar'>
-      <Standings standings={standings} standingsTitle={standingsTitle} />
+      <Standings title={standingsTitle} />
+      <TopScores scores={scores} title={topScoresTitle} />
     </aside>
   )
 }

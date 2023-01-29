@@ -1,39 +1,12 @@
-import { Layout } from '@/components/common/Layout'
-import Link from 'next/link'
-import { useGetAllNewsPostsQuery } from '../../generated/types-and-hooks'
+import { NewsPageLayout } from '@/components/common/NewsPageLayout'
+import { Feed } from '@/components/feed/Feed'
 
 const NewsPosts = () => {
-  const { data, loading } = useGetAllNewsPostsQuery({
-    variables: {
-      pagination: {
-        page: 1,
-        pageSize: 50,
-      },
-      sort: ['createdAt:desc'],
-    },
-  })
-
-  if (loading) return <div>loading...</div>
-
-  const news = data?.newsposts?.data || []
-
-  return (
-    <div>
-      <ul>
-        {news.map((item) => (
-          <li key={item.id}>
-            <Link href={`news/${item.attributes?.slug}` || ''}>
-              {item.attributes?.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  )
+  return <Feed title='All News' view='list' />
 }
 
 export default NewsPosts
 
 NewsPosts.getLayout = function getLayout(page: React.ReactElement) {
-  return <Layout>{page}</Layout>
+  return <NewsPageLayout>{page}</NewsPageLayout>
 }
