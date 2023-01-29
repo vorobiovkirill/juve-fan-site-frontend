@@ -247,7 +247,10 @@ export type HomePage = {
   __typename?: 'HomePage';
   createdAt?: Maybe<Scalars['DateTime']>;
   description?: Maybe<Scalars['String']>;
+  feedTitle: Scalars['String'];
+  standingsTitle: Scalars['String'];
   title: Scalars['String'];
+  topScoresTitle: Scalars['String'];
   updatedAt?: Maybe<Scalars['DateTime']>;
 };
 
@@ -264,7 +267,10 @@ export type HomePageEntityResponse = {
 
 export type HomePageInput = {
   description?: InputMaybe<Scalars['String']>;
+  feedTitle?: InputMaybe<Scalars['String']>;
+  standingsTitle?: InputMaybe<Scalars['String']>;
   title?: InputMaybe<Scalars['String']>;
+  topScoresTitle?: InputMaybe<Scalars['String']>;
 };
 
 export type I18NLocale = {
@@ -1273,7 +1279,7 @@ export type UsersPermissionsUserRelationResponseCollection = {
 export type GetHomePageDataQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetHomePageDataQuery = { __typename?: 'Query', homePage?: { __typename?: 'HomePageEntityResponse', data?: { __typename?: 'HomePageEntity', id?: string | null, attributes?: { __typename?: 'HomePage', title: string, description?: string | null } | null } | null } | null };
+export type GetHomePageDataQuery = { __typename?: 'Query', homePage?: { __typename?: 'HomePageEntityResponse', data?: { __typename?: 'HomePageEntity', id?: string | null, attributes?: { __typename?: 'HomePage', title: string, description?: string | null, feedTitle: string, standingsTitle: string, topScoresTitle: string } | null } | null } | null };
 
 export type GetNewsPostByIdQueryVariables = Exact<{
   id: Scalars['ID'];
@@ -1300,6 +1306,9 @@ export const GetHomePageDataDocument = gql`
       attributes {
         title
         description
+        feedTitle
+        standingsTitle
+        topScoresTitle
       }
     }
   }

@@ -8,9 +8,7 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
-export const LayoutForNewsPost: React.FC<PropsWithChildren> = ({
-  children,
-}) => {
+export const NewsPostLayout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <div
       className={`${inter.variable} font-sans text-customBlack p-0 m-0 min-h-screen grid grid-rows-[auto_1fr_auto]`}

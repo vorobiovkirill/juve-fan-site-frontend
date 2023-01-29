@@ -1,5 +1,5 @@
-import { LayoutForNewsPost } from '@/components/common/LayoutForNewsPost'
-import { useGetNewsPostByIdQuery } from 'generated/types-and-hooks'
+import { NewsPostLayout } from '@/components/common/NewsPostLayout'
+import { useGetNewsPostByIdQuery } from '@/generated/types-and-hooks'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import React from 'react'
@@ -69,5 +69,5 @@ const NewsPost = () => {
 export default NewsPost
 
 NewsPost.getLayout = function getLayout(page: React.ReactElement) {
-  return <LayoutForNewsPost>{page}</LayoutForNewsPost>
+  return <NewsPostLayout>{page}</NewsPostLayout>
 }

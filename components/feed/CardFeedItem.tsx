@@ -1,25 +1,16 @@
-import { Newspost, NewspostEntity } from 'generated/types-and-hooks'
 import Link from 'next/link'
 import Image from 'next/image'
-import React from 'react'
 import { getPublishDate } from '@/utils/date'
+import { FeedItemProps } from '@/components/feed/Feed.types'
 
-interface FeedItemProps {
-  createdAt: Newspost['createdAt']
-  id: NewspostEntity['id']
-  imageUrl: Newspost['imageUrl']
-  title: Newspost['title']
-  slug: Newspost['slug']
-}
-
-export const FeedItem: React.FC<FeedItemProps> = ({
+export const CardFeedItem: React.FC<FeedItemProps> = ({
   id = '',
   createdAt = '',
   imageUrl = '',
   title = '',
   slug = '',
 }) => {
-  const publishDate = getPublishDate(createdAt)
+  const publishDate = getPublishDate(createdAt, 'publishDate')
 
   return (
     <article className='w-full sm:w-full md:w-1/2 self-stretch px-2'>

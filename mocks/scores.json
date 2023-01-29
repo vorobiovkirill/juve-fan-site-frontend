@@ -1,0 +1,1915 @@
+{
+    "get": "players/topscorers",
+    "parameters": {
+        "league": "135",
+        "season": "2022"
+    },
+    "errors": [],
+    "results": 20,
+    "paging": {
+        "current": 0,
+        "total": 1
+    },
+    "response": [
+        {
+            "player": {
+                "id": 2780,
+                "name": "V. Osimhen",
+                "firstname": "Victor James",
+                "lastname": "Osimhen",
+                "age": 25,
+                "birth": {
+                    "date": "1998-12-29",
+                    "place": "Lagos",
+                    "country": "Nigeria"
+                },
+                "nationality": "Nigeria",
+                "height": "185 cm",
+                "weight": "78 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/2780.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 492,
+                        "name": "Napoli",
+                        "logo": "https://media.api-sports.io/football/teams/492.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-3.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 15,
+                        "lineups": 14,
+                        "minutes": 1252,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "7.213333",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 1,
+                        "out": 7,
+                        "bench": 1
+                    },
+                    "shots": {
+                        "total": 47,
+                        "on": 25
+                    },
+                    "goals": {
+                        "total": 13,
+                        "conceded": 0,
+                        "assists": 3,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 178,
+                        "key": 16,
+                        "accuracy": 8
+                    },
+                    "tackles": {
+                        "total": 2,
+                        "blocks": 1,
+                        "interceptions": 2
+                    },
+                    "duels": {
+                        "total": 151,
+                        "won": 56
+                    },
+                    "dribbles": {
+                        "attempts": 24,
+                        "success": 7,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 18,
+                        "committed": 24
+                    },
+                    "cards": {
+                        "yellow": 1,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 18767,
+                "name": "A. Lookman",
+                "firstname": "Ademola Olajade",
+                "lastname": "Alade Aylola Lookman",
+                "age": 26,
+                "birth": {
+                    "date": "1997-10-20",
+                    "place": "London",
+                    "country": "England"
+                },
+                "nationality": "Nigeria",
+                "height": "174 cm",
+                "weight": "71 kg",
+                "injured": false,
+                "photo": "https://media-3.api-sports.io/football/players/18767.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 499,
+                        "name": "Atalanta",
+                        "logo": "https://media.api-sports.io/football/teams/499.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 18,
+                        "lineups": 13,
+                        "minutes": 1092,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "7.116666",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 5,
+                        "out": 11,
+                        "bench": 6
+                    },
+                    "shots": {
+                        "total": 22,
+                        "on": 16
+                    },
+                    "goals": {
+                        "total": 11,
+                        "conceded": 0,
+                        "assists": 3,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 346,
+                        "key": 24,
+                        "accuracy": 15
+                    },
+                    "tackles": {
+                        "total": 7,
+                        "blocks": null,
+                        "interceptions": 3
+                    },
+                    "duels": {
+                        "total": 125,
+                        "won": 52
+                    },
+                    "dribbles": {
+                        "attempts": 35,
+                        "success": 18,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 25,
+                        "committed": 12
+                    },
+                    "cards": {
+                        "yellow": 2,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 3,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 217,
+                "name": "L. Martínez",
+                "firstname": "Lautaro Javier",
+                "lastname": "Martínez",
+                "age": 26,
+                "birth": {
+                    "date": "1997-08-22",
+                    "place": "Bahía Blanca",
+                    "country": "Argentina"
+                },
+                "nationality": "Argentina",
+                "height": "174 cm",
+                "weight": "72 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/217.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 505,
+                        "name": "Inter",
+                        "logo": "https://media-3.api-sports.io/football/teams/505.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 18,
+                        "lineups": 16,
+                        "minutes": 1424,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "7.127777",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 2,
+                        "out": 6,
+                        "bench": 2
+                    },
+                    "shots": {
+                        "total": 49,
+                        "on": 22
+                    },
+                    "goals": {
+                        "total": 9,
+                        "conceded": 0,
+                        "assists": 3,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 345,
+                        "key": 24,
+                        "accuracy": 14
+                    },
+                    "tackles": {
+                        "total": 11,
+                        "blocks": 1,
+                        "interceptions": 6
+                    },
+                    "duels": {
+                        "total": 177,
+                        "won": 81
+                    },
+                    "dribbles": {
+                        "attempts": 34,
+                        "success": 16,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 36,
+                        "committed": 27
+                    },
+                    "cards": {
+                        "yellow": 1,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 1,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 31318,
+                "name": "M&apos;Bala Nzola",
+                "firstname": "M'Bala",
+                "lastname": "Nzola",
+                "age": 27,
+                "birth": {
+                    "date": "1996-08-18",
+                    "place": null,
+                    "country": "Angola"
+                },
+                "nationality": "Angola",
+                "height": "185 cm",
+                "weight": "82 kg",
+                "injured": false,
+                "photo": "https://media-3.api-sports.io/football/players/31318.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 515,
+                        "name": "Spezia",
+                        "logo": "https://media-3.api-sports.io/football/teams/515.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-3.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 18,
+                        "lineups": 18,
+                        "minutes": 1597,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "6.761111",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 1,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": 36,
+                        "on": 17
+                    },
+                    "goals": {
+                        "total": 9,
+                        "conceded": 0,
+                        "assists": 1,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 333,
+                        "key": 16,
+                        "accuracy": 14
+                    },
+                    "tackles": {
+                        "total": 6,
+                        "blocks": 4,
+                        "interceptions": 5
+                    },
+                    "duels": {
+                        "total": 229,
+                        "won": 63
+                    },
+                    "dribbles": {
+                        "attempts": 29,
+                        "success": 9,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 21,
+                        "committed": 38
+                    },
+                    "cards": {
+                        "yellow": 4,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 2,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 22236,
+                "name": "Rafael Leão",
+                "firstname": "Rafael Alexandre",
+                "lastname": "da Conceição Leão",
+                "age": 24,
+                "birth": {
+                    "date": "1999-06-10",
+                    "place": "Almada",
+                    "country": "Portugal"
+                },
+                "nationality": "Portugal",
+                "height": "188 cm",
+                "weight": "81 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/22236.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 489,
+                        "name": "AC Milan",
+                        "logo": "https://media-3.api-sports.io/football/teams/489.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-3.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 17,
+                        "lineups": 15,
+                        "minutes": 1281,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "7.082352",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 2,
+                        "out": 6,
+                        "bench": 2
+                    },
+                    "shots": {
+                        "total": 35,
+                        "on": 15
+                    },
+                    "goals": {
+                        "total": 8,
+                        "conceded": 0,
+                        "assists": 5,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 354,
+                        "key": 28,
+                        "accuracy": 16
+                    },
+                    "tackles": {
+                        "total": 2,
+                        "blocks": 1,
+                        "interceptions": 7
+                    },
+                    "duels": {
+                        "total": 142,
+                        "won": 60
+                    },
+                    "dribbles": {
+                        "attempts": 66,
+                        "success": 30,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 15,
+                        "committed": 11
+                    },
+                    "cards": {
+                        "yellow": 4,
+                        "yellowred": 1,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 18830,
+                "name": "M. Arnautović",
+                "firstname": "Marko",
+                "lastname": "Arnautović",
+                "age": 34,
+                "birth": {
+                    "date": "1989-04-19",
+                    "place": "Wien",
+                    "country": "Austria"
+                },
+                "nationality": "Austria",
+                "height": "192 cm",
+                "weight": "83 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/18830.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 500,
+                        "name": "Bologna",
+                        "logo": "https://media.api-sports.io/football/teams/500.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 14,
+                        "lineups": 14,
+                        "minutes": 1196,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "6.964285",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 4,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": 23,
+                        "on": 13
+                    },
+                    "goals": {
+                        "total": 8,
+                        "conceded": 0,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 347,
+                        "key": 19,
+                        "accuracy": 18
+                    },
+                    "tackles": {
+                        "total": 8,
+                        "blocks": 1,
+                        "interceptions": 2
+                    },
+                    "duels": {
+                        "total": 89,
+                        "won": 35
+                    },
+                    "dribbles": {
+                        "attempts": 16,
+                        "success": 7,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 13,
+                        "committed": 18
+                    },
+                    "cards": {
+                        "yellow": 4,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 3,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 483,
+                "name": "K. Kvaratskhelia",
+                "firstname": "Khvicha",
+                "lastname": "Kvaratskhelia",
+                "age": 22,
+                "birth": {
+                    "date": "2001-02-12",
+                    "place": "Tbilisi",
+                    "country": "Georgia"
+                },
+                "nationality": "Georgia",
+                "height": "183 cm",
+                "weight": "70 kg",
+                "injured": false,
+                "photo": "https://media-3.api-sports.io/football/players/483.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 492,
+                        "name": "Napoli",
+                        "logo": "https://media-3.api-sports.io/football/teams/492.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-3.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 15,
+                        "lineups": 14,
+                        "minutes": 1104,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "7.373333",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 1,
+                        "out": 11,
+                        "bench": 1
+                    },
+                    "shots": {
+                        "total": 31,
+                        "on": 17
+                    },
+                    "goals": {
+                        "total": 7,
+                        "conceded": 0,
+                        "assists": 7,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 357,
+                        "key": 25,
+                        "accuracy": 19
+                    },
+                    "tackles": {
+                        "total": 21,
+                        "blocks": null,
+                        "interceptions": 1
+                    },
+                    "duels": {
+                        "total": 162,
+                        "won": 66
+                    },
+                    "dribbles": {
+                        "attempts": 76,
+                        "success": 25,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 18,
+                        "committed": 8
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 22015,
+                "name": "B. Dia",
+                "firstname": "Boulaye",
+                "lastname": "Dia",
+                "age": 27,
+                "birth": {
+                    "date": "1996-11-16",
+                    "place": "Oyonnax",
+                    "country": "France"
+                },
+                "nationality": "Senegal",
+                "height": "180 cm",
+                "weight": "75 kg",
+                "injured": false,
+                "photo": "https://media-3.api-sports.io/football/players/22015.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 514,
+                        "name": "Salernitana",
+                        "logo": "https://media.api-sports.io/football/teams/514.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 18,
+                        "lineups": 14,
+                        "minutes": 1291,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "6.888888",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 4,
+                        "out": 10,
+                        "bench": 4
+                    },
+                    "shots": {
+                        "total": 17,
+                        "on": 12
+                    },
+                    "goals": {
+                        "total": 7,
+                        "conceded": 0,
+                        "assists": 3,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 281,
+                        "key": 18,
+                        "accuracy": 12
+                    },
+                    "tackles": {
+                        "total": 7,
+                        "blocks": null,
+                        "interceptions": 1
+                    },
+                    "duels": {
+                        "total": 133,
+                        "won": 47
+                    },
+                    "dribbles": {
+                        "attempts": 28,
+                        "success": 12,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 18,
+                        "committed": 12
+                    },
+                    "cards": {
+                        "yellow": 1,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 790,
+                "name": "E. Džeko",
+                "firstname": "Edin",
+                "lastname": "Džeko",
+                "age": 37,
+                "birth": {
+                    "date": "1986-03-17",
+                    "place": "Sarajevo",
+                    "country": "Bosnia and Herzegovina"
+                },
+                "nationality": "Bosnia and Herzegovina",
+                "height": "193 cm",
+                "weight": "80 kg",
+                "injured": false,
+                "photo": "https://media-3.api-sports.io/football/players/790.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 505,
+                        "name": "Inter",
+                        "logo": "https://media.api-sports.io/football/teams/505.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 18,
+                        "lineups": 13,
+                        "minutes": 1137,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "7.050000",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 5,
+                        "out": 7,
+                        "bench": 5
+                    },
+                    "shots": {
+                        "total": 32,
+                        "on": 15
+                    },
+                    "goals": {
+                        "total": 7,
+                        "conceded": 0,
+                        "assists": 2,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 303,
+                        "key": 13,
+                        "accuracy": 12
+                    },
+                    "tackles": {
+                        "total": 1,
+                        "blocks": null,
+                        "interceptions": 2
+                    },
+                    "duels": {
+                        "total": 108,
+                        "won": 49
+                    },
+                    "dribbles": {
+                        "attempts": 15,
+                        "success": 3,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 19,
+                        "committed": 16
+                    },
+                    "cards": {
+                        "yellow": 2,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 125743,
+                "name": "Beto",
+                "firstname": "Norberto",
+                "lastname": "Bercique Gomes Betuncal",
+                "age": 25,
+                "birth": {
+                    "date": "1998-01-31",
+                    "place": "Lisboa",
+                    "country": "Portugal"
+                },
+                "nationality": "Portugal",
+                "height": "194 cm",
+                "weight": "88 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/125743.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 494,
+                        "name": "Udinese",
+                        "logo": "https://media-3.api-sports.io/football/teams/494.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-3.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 19,
+                        "lineups": 11,
+                        "minutes": 1024,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "6.736842",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 8,
+                        "out": 8,
+                        "bench": 8
+                    },
+                    "shots": {
+                        "total": 22,
+                        "on": 12
+                    },
+                    "goals": {
+                        "total": 7,
+                        "conceded": 0,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 135,
+                        "key": 10,
+                        "accuracy": 4
+                    },
+                    "tackles": {
+                        "total": 11,
+                        "blocks": null,
+                        "interceptions": 2
+                    },
+                    "duels": {
+                        "total": 172,
+                        "won": 75
+                    },
+                    "dribbles": {
+                        "attempts": 22,
+                        "success": 6,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 16,
+                        "committed": 19
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 875,
+                "name": "Paulo Exequiel Dybala",
+                "firstname": "Paulo Exequiel",
+                "lastname": "Dybala",
+                "age": 30,
+                "birth": {
+                    "date": "1993-11-15",
+                    "place": "Laguna Larga",
+                    "country": "Argentina"
+                },
+                "nationality": "Argentina",
+                "height": "177 cm",
+                "weight": "75 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/875.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 497,
+                        "name": "AS Roma",
+                        "logo": "https://media-3.api-sports.io/football/teams/497.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 13,
+                        "lineups": 12,
+                        "minutes": 939,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "7.553846",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 1,
+                        "out": 10,
+                        "bench": 1
+                    },
+                    "shots": {
+                        "total": 24,
+                        "on": 13
+                    },
+                    "goals": {
+                        "total": 7,
+                        "conceded": 0,
+                        "assists": 4,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 391,
+                        "key": 31,
+                        "accuracy": 24
+                    },
+                    "tackles": {
+                        "total": 8,
+                        "blocks": null,
+                        "interceptions": 5
+                    },
+                    "duels": {
+                        "total": 94,
+                        "won": 46
+                    },
+                    "dribbles": {
+                        "attempts": 22,
+                        "success": 10,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 26,
+                        "committed": 6
+                    },
+                    "cards": {
+                        "yellow": 2,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 1,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 30937,
+                "name": "M. Zaccagni",
+                "firstname": "Mattia",
+                "lastname": "Zaccagni",
+                "age": 28,
+                "birth": {
+                    "date": "1995-06-16",
+                    "place": "Cesena",
+                    "country": "Italy"
+                },
+                "nationality": "Italy",
+                "height": "177 cm",
+                "weight": "63 kg",
+                "injured": false,
+                "photo": "https://media-3.api-sports.io/football/players/30937.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 487,
+                        "name": "Lazio",
+                        "logo": "https://media.api-sports.io/football/teams/487.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 16,
+                        "lineups": 16,
+                        "minutes": 1255,
+                        "number": null,
+                        "position": "Midfielder",
+                        "rating": "7.300000",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 9,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": 21,
+                        "on": 15
+                    },
+                    "goals": {
+                        "total": 7,
+                        "conceded": 0,
+                        "assists": 3,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 372,
+                        "key": 15,
+                        "accuracy": 19
+                    },
+                    "tackles": {
+                        "total": 20,
+                        "blocks": 2,
+                        "interceptions": 8
+                    },
+                    "duels": {
+                        "total": 162,
+                        "won": 92
+                    },
+                    "dribbles": {
+                        "attempts": 28,
+                        "success": 16,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 51,
+                        "committed": 25
+                    },
+                    "cards": {
+                        "yellow": 2,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 1,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 1863,
+                "name": "Ciro Immobile",
+                "firstname": "Ciro",
+                "lastname": "Immobile",
+                "age": 33,
+                "birth": {
+                    "date": "1990-02-20",
+                    "place": "Torre Annunziata",
+                    "country": "Italy"
+                },
+                "nationality": "Italy",
+                "height": "185 cm",
+                "weight": "78 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/1863.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 487,
+                        "name": "Lazio",
+                        "logo": "https://media-3.api-sports.io/football/teams/487.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 14,
+                        "lineups": 13,
+                        "minutes": 1013,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "7.078571",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 1,
+                        "out": 3,
+                        "bench": 2
+                    },
+                    "shots": {
+                        "total": 28,
+                        "on": 15
+                    },
+                    "goals": {
+                        "total": 7,
+                        "conceded": 0,
+                        "assists": 3,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 269,
+                        "key": 13,
+                        "accuracy": 14
+                    },
+                    "tackles": {
+                        "total": 6,
+                        "blocks": 1,
+                        "interceptions": 1
+                    },
+                    "duels": {
+                        "total": 77,
+                        "won": 27
+                    },
+                    "dribbles": {
+                        "attempts": 14,
+                        "success": 5,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 10,
+                        "committed": 10
+                    },
+                    "cards": {
+                        "yellow": 2,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 1,
+                        "missed": 1,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 333,
+                "name": "Arkadiusz Krystian Milik",
+                "firstname": "Arkadiusz Krystian",
+                "lastname": "Milik",
+                "age": 29,
+                "birth": {
+                    "date": "1994-02-28",
+                    "place": "Tychy",
+                    "country": "Poland"
+                },
+                "nationality": "Poland",
+                "height": "186 cm",
+                "weight": "80 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/333.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 496,
+                        "name": "Juventus",
+                        "logo": "https://media.api-sports.io/football/teams/496.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 16,
+                        "lineups": 10,
+                        "minutes": 952,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "6.937500",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 6,
+                        "out": 4,
+                        "bench": 6
+                    },
+                    "shots": {
+                        "total": 21,
+                        "on": 15
+                    },
+                    "goals": {
+                        "total": 6,
+                        "conceded": 0,
+                        "assists": 1,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 269,
+                        "key": 7,
+                        "accuracy": 13
+                    },
+                    "tackles": {
+                        "total": 7,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": 113,
+                        "won": 51
+                    },
+                    "dribbles": {
+                        "attempts": 8,
+                        "success": 5,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 17,
+                        "committed": 12
+                    },
+                    "cards": {
+                        "yellow": 2,
+                        "yellowred": 1,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 30415,
+                "name": "D. Vlahović",
+                "firstname": "Dušan",
+                "lastname": "Vlahović",
+                "age": 23,
+                "birth": {
+                    "date": "2000-01-28",
+                    "place": "Beograd",
+                    "country": "Serbia"
+                },
+                "nationality": "Serbia",
+                "height": "190 cm",
+                "weight": "88 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/30415.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 496,
+                        "name": "Juventus",
+                        "logo": "https://media.api-sports.io/football/teams/496.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 10,
+                        "lineups": 10,
+                        "minutes": 854,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "7.170000",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 5,
+                        "bench": 1
+                    },
+                    "shots": {
+                        "total": 26,
+                        "on": 12
+                    },
+                    "goals": {
+                        "total": 6,
+                        "conceded": 0,
+                        "assists": 1,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 171,
+                        "key": 11,
+                        "accuracy": 12
+                    },
+                    "tackles": {
+                        "total": 6,
+                        "blocks": 2,
+                        "interceptions": 1
+                    },
+                    "duels": {
+                        "total": 95,
+                        "won": 41
+                    },
+                    "dribbles": {
+                        "attempts": 13,
+                        "success": 5,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 13,
+                        "committed": 9
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 1,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 36899,
+                "name": "T. Koopmeiners",
+                "firstname": "Teun",
+                "lastname": "Koopmeiners",
+                "age": 25,
+                "birth": {
+                    "date": "1998-02-28",
+                    "place": "Amsterdam",
+                    "country": "Netherlands"
+                },
+                "nationality": "Netherlands",
+                "height": "184 cm",
+                "weight": "77 kg",
+                "injured": false,
+                "photo": "https://media-3.api-sports.io/football/players/36899.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 499,
+                        "name": "Atalanta",
+                        "logo": "https://media.api-sports.io/football/teams/499.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-3.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 18,
+                        "lineups": 17,
+                        "minutes": 1565,
+                        "number": null,
+                        "position": "Midfielder",
+                        "rating": "7.105555",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 1,
+                        "out": 1,
+                        "bench": 1
+                    },
+                    "shots": {
+                        "total": 24,
+                        "on": 17
+                    },
+                    "goals": {
+                        "total": 6,
+                        "conceded": 0,
+                        "assists": 3,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 820,
+                        "key": 30,
+                        "accuracy": 35
+                    },
+                    "tackles": {
+                        "total": 25,
+                        "blocks": 4,
+                        "interceptions": 13
+                    },
+                    "duels": {
+                        "total": 132,
+                        "won": 65
+                    },
+                    "dribbles": {
+                        "attempts": 25,
+                        "success": 12,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 12,
+                        "committed": 20
+                    },
+                    "cards": {
+                        "yellow": 5,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 2,
+                        "missed": 2,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 30558,
+                "name": "N. Barella",
+                "firstname": "Nicolò",
+                "lastname": "Barella",
+                "age": 26,
+                "birth": {
+                    "date": "1997-02-07",
+                    "place": "Cagliari",
+                    "country": "Italy"
+                },
+                "nationality": "Italy",
+                "height": "175 cm",
+                "weight": "68 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/30558.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 505,
+                        "name": "Inter",
+                        "logo": "https://media-3.api-sports.io/football/teams/505.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-3.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 18,
+                        "lineups": 17,
+                        "minutes": 1454,
+                        "number": null,
+                        "position": "Midfielder",
+                        "rating": "7.111111",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 1,
+                        "out": 5,
+                        "bench": 1
+                    },
+                    "shots": {
+                        "total": 14,
+                        "on": 8
+                    },
+                    "goals": {
+                        "total": 5,
+                        "conceded": 0,
+                        "assists": 5,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 758,
+                        "key": 26,
+                        "accuracy": 35
+                    },
+                    "tackles": {
+                        "total": 23,
+                        "blocks": 4,
+                        "interceptions": 7
+                    },
+                    "duels": {
+                        "total": 140,
+                        "won": 75
+                    },
+                    "dribbles": {
+                        "attempts": 22,
+                        "success": 14,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 24,
+                        "committed": 19
+                    },
+                    "cards": {
+                        "yellow": 3,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 19194,
+                "name": "T. Abraham",
+                "firstname": "Tammy",
+                "lastname": "Bakumo-Abraham",
+                "age": 26,
+                "birth": {
+                    "date": "1997-10-02",
+                    "place": "London",
+                    "country": "England"
+                },
+                "nationality": "England",
+                "height": "190 cm",
+                "weight": "80 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/19194.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 497,
+                        "name": "AS Roma",
+                        "logo": "https://media.api-sports.io/football/teams/497.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 19,
+                        "lineups": 15,
+                        "minutes": 1347,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "6.868421",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 4,
+                        "out": 10,
+                        "bench": 4
+                    },
+                    "shots": {
+                        "total": 33,
+                        "on": 18
+                    },
+                    "goals": {
+                        "total": 5,
+                        "conceded": 0,
+                        "assists": 3,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 288,
+                        "key": 23,
+                        "accuracy": 10
+                    },
+                    "tackles": {
+                        "total": 13,
+                        "blocks": 4,
+                        "interceptions": 2
+                    },
+                    "duels": {
+                        "total": 188,
+                        "won": 87
+                    },
+                    "dribbles": {
+                        "attempts": 37,
+                        "success": 10,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 29,
+                        "committed": 19
+                    },
+                    "cards": {
+                        "yellow": 1,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 2412,
+                "name": "Felipe Anderson",
+                "firstname": "Felipe",
+                "lastname": "Anderson Pereira Gomes",
+                "age": 30,
+                "birth": {
+                    "date": "1993-04-15",
+                    "place": "Brasília",
+                    "country": "Brazil"
+                },
+                "nationality": "Brazil",
+                "height": "175 cm",
+                "weight": "70 kg",
+                "injured": false,
+                "photo": "https://media-3.api-sports.io/football/players/2412.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 487,
+                        "name": "Lazio",
+                        "logo": "https://media.api-sports.io/football/teams/487.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 18,
+                        "lineups": 17,
+                        "minutes": 1435,
+                        "number": null,
+                        "position": "Midfielder",
+                        "rating": "7.044444",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 1,
+                        "out": 8,
+                        "bench": 1
+                    },
+                    "shots": {
+                        "total": 17,
+                        "on": 11
+                    },
+                    "goals": {
+                        "total": 5,
+                        "conceded": 0,
+                        "assists": 2,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 583,
+                        "key": 25,
+                        "accuracy": 25
+                    },
+                    "tackles": {
+                        "total": 34,
+                        "blocks": 2,
+                        "interceptions": 9
+                    },
+                    "duels": {
+                        "total": 175,
+                        "won": 80
+                    },
+                    "dribbles": {
+                        "attempts": 43,
+                        "success": 23,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 18,
+                        "committed": 20
+                    },
+                    "cards": {
+                        "yellow": 1,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 2295,
+                "name": "Olivier Jonathan Giroud",
+                "firstname": "Olivier Jonathan",
+                "lastname": "Giroud",
+                "age": 37,
+                "birth": {
+                    "date": "1986-09-30",
+                    "place": "Chambéry",
+                    "country": "France"
+                },
+                "nationality": "France",
+                "height": "193 cm",
+                "weight": "91 kg",
+                "injured": false,
+                "photo": "https://media.api-sports.io/football/players/2295.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 489,
+                        "name": "AC Milan",
+                        "logo": "https://media.api-sports.io/football/teams/489.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-3.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 16,
+                        "lineups": 12,
+                        "minutes": 1028,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "7.087500",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 4,
+                        "out": 7,
+                        "bench": 5
+                    },
+                    "shots": {
+                        "total": 38,
+                        "on": 15
+                    },
+                    "goals": {
+                        "total": 5,
+                        "conceded": 0,
+                        "assists": 4,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 261,
+                        "key": 16,
+                        "accuracy": 10
+                    },
+                    "tackles": {
+                        "total": 3,
+                        "blocks": 1,
+                        "interceptions": 1
+                    },
+                    "duels": {
+                        "total": 134,
+                        "won": 79
+                    },
+                    "dribbles": {
+                        "attempts": 5,
+                        "success": 3,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 14,
+                        "committed": 15
+                    },
+                    "cards": {
+                        "yellow": 3,
+                        "yellowred": 1,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 1,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        }
+    ]
+}
