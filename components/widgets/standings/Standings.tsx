@@ -1,10 +1,9 @@
 import standingsJson from '@/mocks/standings.json'
 // import { useGetStandings } from 'api/useRequest';
 
-import type { IStandingItem } from './Standings.types'
-
 import { getPublishDate } from '@/utils/date'
 import { StandingItem } from './StandingsItem'
+// import { WidgetSkeleton } from '../WidgetSkeleton'
 
 interface IStandings {
   title: string
@@ -13,10 +12,12 @@ interface IStandings {
 export const Standings: React.FC<IStandings> = ({ title }) => {
   // const { standings, error, isLoading } = useGetStandings('/standings?season=2022&league=135');
   const standings = standingsJson?.response[0].league.standings.flat() || []
-  // if (error) return <div>Failed to fetch users.</div>;
-  // if (isLoading) return <h2>Loading...</h2>;
-
   const date = new Date(Date.now())
+
+  // if (error) return <div>Failed to fetch users.</div>;
+
+  // if (isLoading) return <WidgetSkeleton />
+
   return (
     <div className='mb-10 w-full rounded overflow-hidden shadow-lg bg-white border border-customYellow'>
       <div className='px-3 py-4 dark:bg-gray-800'>

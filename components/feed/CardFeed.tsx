@@ -8,7 +8,7 @@ export const CardFeed: React.FC<IFeedView> = ({ feed, title }) => {
         {title}
       </h2>
       <div className='mb-8 flex flex-wrap gap-y-4'>
-        {feed?.map((item) => {
+        {feed.map((item) => {
           return (
             <CardFeedItem
               key={item.id}

@@ -3,6 +3,7 @@ import { Feed } from '@/components/feed/Feed'
 import { Sidebar } from '@/components/Sidebar'
 import { Layout } from '@/components/common/Layout'
 import { useGetHomePageDataQuery } from '@/generated/types-and-hooks'
+import { Modal } from '@/components/Modal'
 
 const Home = () => {
   const { data, loading } = useGetHomePageDataQuery()
@@ -24,6 +25,7 @@ const Home = () => {
         topScoresTitle={meta?.topScoresTitle || ''}
       />
       <Feed title={meta?.feedTitle || ''} />
+      <Modal />
     </>
   )
 }

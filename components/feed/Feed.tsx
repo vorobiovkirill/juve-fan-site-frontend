@@ -1,10 +1,14 @@
 import { useState } from 'react'
 
-import { useGetAllNewsPostsQuery } from '@/generated/types-and-hooks'
+import {
+  NewspostEntity,
+  useGetAllNewsPostsQuery,
+} from '@/generated/types-and-hooks'
 import { Pagination } from '@/components/Pagination'
 import { CardFeed } from '@/components/feed/CardFeed'
 import { ListFeed } from '@/components/feed/ListFeed'
 import type { IFeed } from '@/components/feed/Feed.types'
+import { CardFeedSkeleton } from './CardFeedSkeleton'
 
 export const Feed: React.FC<IFeed> = ({ title, view = 'default' }) => {
   const [currentPage, setCurrentPage] = useState(1)
@@ -19,7 +23,7 @@ export const Feed: React.FC<IFeed> = ({ title, view = 'default' }) => {
     },
   })
 
-  const feed = data?.newsposts?.data
+  const feed = data?.newsposts?.data as NewspostEntity[]
   const pagination = data?.newsposts?.meta.pagination
 
   const onPageChange = (page: number): void => {
@@ -34,7 +38,12 @@ export const Feed: React.FC<IFeed> = ({ title, view = 'default' }) => {
     setCurrentPage((prevState) => prevState + 1)
   }
 
-  if (loading) return <div>loading...</div>
+  if (loading) {
+    const skeleton = [
+      ...Array.from({ length: 10 }, (i) => <CardFeedSkeleton />),
+    ]
+    return <div className='mb-8 flex flex-wrap gap-y-4'>{skeleton}</div>
+  }
 
   return (
     <main>
